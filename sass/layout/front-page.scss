@@ -2,16 +2,25 @@
         .content-area {
             height: 100vh;
             display: flex;
-            background-image: url("./img/succulent_1.png");
-            background-repeat: no-repeat;
-            background-position-x: 80%;
-            background-position-y: 100%;
-            background-size: 50vw;
-                    h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 4.5rem;
-        }
+                h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 4.5rem;
+            }
         }
     }
+
+#homepage {
+    background-image: url("./img/succulent_1.png");
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 100%;
+    background-size: 50vw;
+}
+
+.slide {
+  width:calc(100vw - 150px);
+  min-height:100%;
+  float:left;
+}

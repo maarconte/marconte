@@ -15,6 +15,14 @@ textarea {
 	-webkit-text-fill-color: transparent;
 }
 
+.vertical-text {
+	-webkit-writing-mode : vertical-lr;
+-ms-writing-mode : tb-lr ; /* ancien IE */
+-ms-writing-mode : vertical-lr;
+writing-mode : vertical-lr;
+  text-orientation: sideways;
+}
+
 @import "headings";
 
 @import "copy";

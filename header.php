@@ -23,4 +23,4 @@
 <body <?php body_class(); ?>>
 <?php get_sidebar(); ?>
 <div id="page" class="site">
-	<div id="content" class="site-content content-area ">
+	<div id="content" class="site-content">

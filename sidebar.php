@@ -60,7 +60,7 @@
       <li class="list-item ">
         <div style="background-image:url(<?php echo wp_get_attachment_image_url($image);?>)"class="list_logo"></div>
         <div class="list_caption">
-          <h5 class="list_txt list_poste"><?php the_sub_field('ecole'); ?></h5>
+          <h5 class="list_txt list_poste"><?php the_sub_field('poste'); ?></h5>
           <p class="list_txt list_entreprise"><?php the_sub_field('entreprise'); ?></p>
           <p class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></p>
         </div>  
