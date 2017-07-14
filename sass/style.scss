@@ -122,6 +122,12 @@ and comment the line "@import "bootsrap/bootstrap"".
 @import "site/site";
 
 /*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/sidebar-content";
+@import "layout/front-page";
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
@@ -130,3 +136,6 @@ and comment the line "@import "bootsrap/bootstrap"".
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+.menu-slide {
+	display: none;
+}

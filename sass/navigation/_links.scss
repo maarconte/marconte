@@ -17,3 +17,42 @@ a {
 		outline: 0;
 	}
 }
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-burger svg {
+    width: 30px;
+    height: auto;
+}
+
+#bar-1,
+#bar-3 {
+    transition: .2s ;
+    transform-origin: center;
+}
+
+.btn-burger.active svg #bar-1 {
+    transform: translateY(220%) rotate(45deg);
+}
+
+.btn-burger.active svg #bar-3 {
+    transform: translateY(-220%) rotate(-45deg);
+}
+
+.btn-burger.active svg #bar-2 {
+  animation: fadeOut .2s forwards ease-in-out;
+}
