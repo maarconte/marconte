@@ -23,8 +23,8 @@
 <div class="navigation">
 		<div class="menu-slide">
       <div class="site-branding">
-        <h1><?php bloginfo('name'); ?></h1>
-        <h2><?php bloginfo('description'); ?></h2>
+        <h3><?php bloginfo('name'); ?></h3>
+        <h2 class="text-gradient"><?php bloginfo('description'); ?></h2>
       </div>
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">

@@ -1,4 +1,21 @@
-$font__main: sans-serif;
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Book.otf");
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Light.otf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: FuturaSTD;
+    src: url("./fonts/FuturaStd-Book.otffonts");
+}
+
+$font__main: FuturaSTD;
+$font__heading: Quicksand;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

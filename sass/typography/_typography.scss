@@ -9,6 +9,12 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+.text-gradient {
+ 	background-image: $gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 @import "headings";
 
 @import "copy";

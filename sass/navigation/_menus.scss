@@ -150,6 +150,8 @@
         display: none;
 		padding-left: calc(#{$size__site-sidebar} + 20px); 
 		padding-right: 20px; 
+		padding-top: 30px; 
+		padding-bottom: 30px; 
       //  max-width: 500px;
         .tabs {
             display: flex;
