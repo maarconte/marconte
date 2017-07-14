@@ -37,16 +37,30 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active" id="about" role="tabpanel">0</div>
+  <div class="tab-pane active" id="about" role="tabpanel">
+    <p><?php the_field('bio', 'option'); ?></p>
+  </div>
   <div class="tab-pane" id="cv" role="tabpanel">1</div>
 </div>
 <footer>
 	<ul class="social">
-		<li><a href="#">0</a></li>
-		<li><a href="#">0</a></li>
-		<li><a href="#">0</a></li>
-    </ul>
-                    </footer>
+    <?php if( get_field('facebook', 'option') ): ?>
+          <li><a target="_blank" href="<?php echo the_field('facebook', 'option'); ?>"><i class="fa fa-facebook"></i></a></li>
+    <?php endif; ?>
+    <?php if( get_field('twitter', 'option') ): ?>
+          <li><a target="_blank" href="<?php echo the_field('twitter', 'option'); ?>"><i class="fa fa-twitter"></i></a></li>
+    <?php endif; ?>
+    <?php if( get_field('linkedin', 'option') ): ?>
+          <li><a target="_blank" href="<?php echo the_field('linkedin', 'option'); ?>"><i class="fa fa-linkedin"></i></a></li>
+    <?php endif; ?>
+    <?php if( get_field('instagram', 'option') ): ?>
+                <li><a target="_blank" href="<?php echo the_field('instagram', 'option'); ?>"><i class="fa fa-instagram"></i></a></li>
+    <?php endif; ?>
+    <?php if( get_field('github', 'option') ): ?>
+          <li><a target="_blank" href="<?php echo the_field('github', 'option'); ?>"><i class="fa fa-github"></i></a></li>
+    <?php endif; ?>
+	</ul>
+  </footer>
 		</div>
 </div>
 </aside><!-- #secondary -->

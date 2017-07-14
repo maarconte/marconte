@@ -153,11 +153,14 @@
 		padding-top: 30px; 
 		padding-bottom: 30px; 
       //  max-width: 500px;
-        .tabs {
+        .nav-tabs {
             display: flex;
             align-items: center;
             flex-flow: row wrap;
-            li {
+			border-bottom: 1px solid $grey;
+			border-top: 1px solid $grey;
+			margin: 0;
+            .nav-item {
                 padding: 0 15px;
                 flex: 1 auto;
                 text-align: center;
@@ -166,16 +169,35 @@
                 font-size: 1rem;
                 display: relative;
                 line-height: 60px;
-                a {
+				margin: 0;
+				position: relative;
+				&:first-child::after {
+					content: ' ';
+					width: 1px;
+					position: absolute;
+					top: 10%;
+					right: 0;
+					background-color: $grey;
+					height: 80%;
+					//border-right: solid 1px $grey;
+				}
+
+                .nav-link {
                     display: block;
                     width: 100%;
                     height: 100%;
                     text-decoration: none;
+					text-transform: initial !important;
+					&.active {
+						border: none !important;					
+				}
                 }
+
             }
         }
-        .tab_content {
-            overflow: hidden;
+        .tab-content {
+           overflow: scroll;
+			height: calc(100% - 300px);
             padding: 20px;
             .tabs_item:not(:first-child) {
                 display: none;
@@ -183,28 +205,30 @@
         }
     }
     footer {
-        border-top: solid 1px #eee;
         position: absolute;
-        width: 100%;
+        width: calc(100% - 90px);
         bottom: 0;
         z-index: 8888;
         background-color: white;
+		display: flex;
         .social {
             display: flex;
             align-items: center;
             flex-flow: row wrap;
             text-align: center;
-            a {
-                flex: 1 auto;
-                display: block;
+			border-top: solid 1px $grey;
+			margin: 0 auto;
+			padding: 0;
                 li {
                     padding: 15px;
+					list-style: none;
 					a {
 						flex: 1 auto;
-                display: block;
+                		display: block;
+						font-size: 2rem;
 					}
                 }
-            }
+            
         }
     }
 }
