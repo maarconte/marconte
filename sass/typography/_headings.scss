@@ -15,4 +15,14 @@ h3 {
 }
 h4 {
 	font-size: 1.5rem;
+	font-family: $font__main;
+}
+h5 {
+	font-size: 1.2rem;
+	font-family: $font__main;
+}
+h6 {
+	font-size: 1.2rem;
+	font-family: $font__main;
+	text-transform: inherit;
 }

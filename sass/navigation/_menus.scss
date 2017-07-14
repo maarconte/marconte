@@ -232,6 +232,44 @@
         }
     }
 }
+#cv {
+	section {
+		margin-bottom: 30px;
+	}
+	.list {
+		.list-item {
+			border: solid 1px $grey;
+			padding: 10px;
+			display: flex;
+			margin-bottom: 15px;
+			.list_logo {
+				width: 100px;
+				height: 100px;
+				margin-right: 10px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+			}
+			.list_cation {
+			//height: 120px;
+			display: flex;
+			flex-direction: column;
+			}
+			.list_txt {
+				margin-bottom: .8rem;
+			}
+			.list_poste {
+				margin-top: 5px;
+			}
+			.list_details {
+				color: $grey;
+				margin-bottom: 0;
+			}
+
+		}
+	}	
+}
+
 
 @keyframes fadeIn {
     from {
