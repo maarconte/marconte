@@ -163,4 +163,23 @@ if( function_exists('acf_add_options_page') ) {
  
 }
 
+function create_posttype() {
+    register_post_type( 'Portfolios',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Portfolios' ),
+                'singular_name' => __( 'Portfolios' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'portfolios'),
+			'supports' => array( 'thumbnail' )
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+
 

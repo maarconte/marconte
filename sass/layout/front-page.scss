@@ -19,6 +19,41 @@
     background-size: 50vw;
 }
 
+#portfolio {
+    position: relative;
+    .container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        .row {
+            flex-wrap: nowrap;
+            overflow: scroll;
+        }
+    .list_projet {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: block;
+        height: 200px;
+        margin-right: 10px;
+        padding: 0;
+                    &::after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $primary;
+            opacity: 0.5;
+        }
+    }
+
+    }
+
+}
+
 .slide {
   width:calc(100vw - 150px);
   min-height:100%;
