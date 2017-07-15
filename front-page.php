@@ -16,24 +16,72 @@ $posts = get_posts(array(
 ));
 
 if( $posts ): ?>
+<div class="tab-content">
+    <?php 
+        $i = 0;
+
+        foreach( $posts as $post ): 		
+		setup_postdata( $post );		
+		?>
+    <div class="tab-pane <?php if ($i == 0) { echo 'active';} ?>" id="post-<?php the_ID(); ?>" role="tabpanel">
+    <div class="row">
+        <div class="col-3 portfolio_txt">
+               <h3 class="text-gradient "> <?php the_title()?></h3>
+               <h5>Client</h5>
+               <p><?php the_field("client");?> </p>
+               <h5>Mission</h5>
+               <p><?php the_field("mission");?> </p>
+        </div>
+        <div class="col-9 d-flex align-items-center">
+        <?php 
+            $images = get_field('galerie');
+            if( $images ): ?>
+                
+                    
+                <div id="carouselExampleIndicators" class="carousel mx-auto " data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <?php 
+                        $j = 0;
+                        foreach( $images as $image ): ?>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>" class="<?php if ($j == 0) { echo 'active';} ?>">O</li>
+                        <?php 
+                        $j++;
+                        endforeach; ?>
+                    </ol>
+                
+                <div id="slider" class="carousel-inner" role="listbox">
+                        <?php
+                        $k = 0;
+                         foreach( $images as $image ): ?>
+                            <div div class="carousel-item <?php if ($k == 0) { echo 'active';} ?>">
+                                <img class="d-block " src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?> <?php echo $k ?>" />
+                            </div>                           
+                        <?php 
+                        $k++;
+                        endforeach; ?>
+                </div>
+                </div>
+
+            <?php endif; ?>
+        </div>
+    </div>
+    </div>
+    <?php 
+     $i++;
+    endforeach; ?>	
+</div>
 	<div class="container">
-	<ul class="row">
-		
-	<?php foreach( $posts as $post ): 
-		
+	<ul class="row nav nav-tabs" role="tablist">
+	<?php foreach( $posts as $post ): 		
 		setup_postdata( $post );
-		
 		?>
         <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');?>
-		<li class="list_projet col-3" style="background-image:url(<?php echo $featured_img_url ?>)">
-           
-			<a href="#" style="background-image:url(<?php echo $featured_img_url ?>)"></a>
+		<li class="list_projet col-3 nav-item" style="background-image:url(<?php echo $featured_img_url ?>)">           
+			<a class="nav-link align-self-center <?php if ($i == 0) { echo 'active';} ?>" data-toggle="tab"  role="tab" href="#post-<?php the_ID(); ?>" ><?php the_title()?></a>
 		</li>
-	
 	<?php endforeach; ?>	
 	</ul>
     </div>	
 	<?php wp_reset_postdata(); ?>
-
 <?php endif; ?>
 </div>
