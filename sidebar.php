@@ -48,7 +48,7 @@
         $exp = get_field_object($selector);
     ?>
 
-      <h6><?php echo $exp['label'] ?></h6>
+      <h5 class="color-primary"><?php echo $exp['label'] ?></h5>
       <ul id="exp" class="list">
       <?php
   // check if the repeater field has rows of data
@@ -60,7 +60,7 @@
       <li class="list-item ">
         <div style="background-image:url(<?php echo wp_get_attachment_image_url($image);?>)" class="list_logo"></div>
         <div class="list_caption">
-          <h5 class="list_txt list_poste"><?php the_sub_field('poste'); ?></h5>
+          <h6 class="list_txt list_poste"><?php the_sub_field('poste'); ?></h6>
           <p class="list_txt list_entreprise"><?php the_sub_field('entreprise'); ?></p>
           <p class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></p>
         </div>  
@@ -78,7 +78,7 @@
       $form = get_field_object($selector);
       ?>
 <section id="formation">
-  <h6><?php echo $form['label'] ?></h6>
+  <h5 class="color-primary"><?php echo $form['label'] ?></h5>
       <ul id="form" class="list">
       <?php
   // check if the repeater field has rows of data
@@ -91,7 +91,7 @@
       <li class="list-item ">
         <div style="background-image:url(<?php echo $image['url'];?>)" class="list_logo"></div>
         <div class="list_caption">
-          <h5 class="list_txt list_ecole"><?php the_sub_field('ecole'); ?></h5>
+          <h6 class="list_txt list_ecole"><?php the_sub_field('ecole'); ?></h6>
           <p class="list_txt list_diplome"><?php the_sub_field('diplome'); ?></p>
           <p class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></p>
         </div>  

@@ -7,7 +7,16 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		background-image: $gradient;
+	background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        .fa:before {
+        background: linear-gradient(-136deg, #43e695 0%, #3bb2b8 48%);
+        background-clip: text;
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
 	}
 	&:focus {
 		outline: thin dotted;
@@ -15,7 +24,7 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
-	}
+    }
 }
 
 @keyframes fadeOut {

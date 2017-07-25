@@ -26,3 +26,29 @@ $color__border-input: #ccc;
 $color__border-abbr: #666;
 
 $gradient: linear-gradient(-136deg, #43E695 0%, #3BB2B8 48%);
+
+// Classes
+.color-primary {
+    color: $primary;
+}
+.color-grey {
+    color: $grey;
+}
+.color-black {
+    color: $black;
+}
+.color-alert {
+    color: $alert;
+}
+.bg-primary {
+    background-color: $primary;
+}
+.bg-grey {
+    background-color: $grey;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-alert {
+    background-color: $alert;
+}
