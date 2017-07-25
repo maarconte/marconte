@@ -25,14 +25,14 @@ if( $posts ): ?>
 		?>
     <div class="tab-pane <?php if ($i == 0) { echo 'active';} ?>" id="post-<?php the_ID(); ?>" role="tabpanel">
     <div class="row">
-        <div class="col-md-3 portfolio_txt">
+        <div class="resize col-md-3 portfolio_txt">
                <h3 class="text-gradient "> <?php the_title()?></h3>
                <h5>Client</h5>
                <p><?php the_field("client");?> </p>
                <h5>Mission</h5>
                <p><?php the_field("mission");?> </p>
         </div>
-        <div class="col-md-9 d-flex align-items-center portfolio_slider">
+        <div class="resize col-md-9 d-flex align-items-center portfolio_slider">
         <?php 
             $images = get_field('galerie');
             if( $images ): ?>

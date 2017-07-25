@@ -22,46 +22,41 @@ jQuery(document).ready(function() {
 
 jQuery(window).on('load resize', function(){
         var html = jQuery('html');
-        var slider = jQuery('.portfolio_slider');
-        var desc = jQuery('.portfolio_txt');
+        var el = jQuery('.resize');
         var viewportwidth;
 
         if(typeof window.innerWidth!='undefined'){
               viewportwidth=window.innerWidth;
         }
 
-        if(viewportwidth >= 1200){
-           html.addClass("desktop-xl");
-            slider.removeClass("col-md-12 mobile");
-           desc.removeClass("col-md-12 mobile");
-        }else{
-           html.removeClass("desktop-xl");
-        }
+        // if(viewportwidth >= 1200){
+        //    html.addClass("desktop-xl");
+        //     slider.removeClass("col-md-12 mobile");
+        //    desc.removeClass("col-md-12 mobile");
+        // }else{
+        //    html.removeClass("desktop-xl");
+        // }
 
-        if(viewportwidth < 1200 && viewportwidth >= 992){
+        if(/* viewportwidth < 1200 &&  */ viewportwidth >= 992){
            html.addClass("desktop");
-            slider.removeClass("col-md-12 mobile");
-           desc.removeClass("col-md-12 mobile");
+            el.removeClass("col-md-12");
         }else{
            html.removeClass("desktop");
         }
 
         if(viewportwidth < 992  && viewportwidth >= 768 ){
            html.addClass("tablet");
-           slider.addClass("col-md-12 tablet");
-           desc.addClass("col-md-12 tablet");
+           el.addClass("col-md-12 tablet");
         }else{
            html.removeClass("tablet");
-           slider.removeClass("col-md-12 tablet");
-           desc.removeClass("col-md-12 tablet");
+           el.removeClass("tablet");
         }
 
         if( viewportwidth < 768 ){
            html.addClass("mobile");
-          slider.addClass("col-md-12 mobile");
-           desc.addClass("col-md-12 mobile");
-           
+          el.addClass("col-md-12 mobile");           
         }else{
            html.removeClass("mobile");
+           el.removeClass("mobile");
         }
 });
