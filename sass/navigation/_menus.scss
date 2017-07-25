@@ -9,11 +9,12 @@
     }
 }
 
-button {
+button, button:active {
     border: none;
 	background-color: transparent;
 	padding: 0;
 	width: 100%;
+	box-shadow: none;
 }
 
 .btn-burger svg {

@@ -31,16 +31,22 @@
             overflow: scroll;
         }
         .carousel {
-            width: 636px;
-            height: 300px;
+           width: 100vw;
+            height: 70vh;
             overflow: hidden;
-            // .carousel-item {
-            //     position: relative;
-            //     height: 100%;
-            //     img {
-            //         height: 100%;
-            //     }
-            // }
+            .carousel-inner {
+                height: 100%;
+                .carousel-item {
+                    position: relative;
+                    height: 100%;
+                    img {
+                        height: 100%;
+                        max-width: inherit;
+                        margin: 0 auto;
+                    }
+                }
+
+            }
         }
     }
     .container {
