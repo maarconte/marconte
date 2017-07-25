@@ -58,7 +58,7 @@
       $image = get_sub_field('logo');
       ?>
       <li class="list-item ">
-        <div style="background-image:url(<?php echo wp_get_attachment_image_url($image);?>)"class="list_logo"></div>
+        <div style="background-image:url(<?php echo wp_get_attachment_image_url($image);?>)" class="list_logo"></div>
         <div class="list_caption">
           <h5 class="list_txt list_poste"><?php the_sub_field('poste'); ?></h5>
           <p class="list_txt list_entreprise"><?php the_sub_field('entreprise'); ?></p>
@@ -85,10 +85,11 @@
   if( have_rows('formation', 'option') ):
     // loop through the rows of data
       while ( have_rows('formation', 'option') ) : the_row(); 
-      $image1 = get_sub_field('logo');
+      $image = get_sub_field('logo');
+     
       ?>
       <li class="list-item ">
-        <div style="background-image:url(<?php echo wp_get_attachment_image_url($image1);?>)"class="list_logo"></div>
+        <div style="background-image:url(<?php echo $image['url'];?>)" class="list_logo"></div>
         <div class="list_caption">
           <h5 class="list_txt list_ecole"><?php the_sub_field('ecole'); ?></h5>
           <p class="list_txt list_diplome"><?php the_sub_field('diplome'); ?></p>

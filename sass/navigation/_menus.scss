@@ -266,7 +266,7 @@ button, button:active {
         }
     }
 }
-#cv {
+#cv, #formation {
 	section {
 		margin-bottom: 30px;
 	}
@@ -284,7 +284,7 @@ button, button:active {
 				background-size: cover;
 				background-position: center center;
 			}
-			.list_cation {
+			.list_caption {
 			//height: 120px;
 			display: flex;
 			flex-direction: column;
@@ -292,7 +292,7 @@ button, button:active {
 			.list_txt {
 				margin-bottom: .8rem;
 			}
-			.list_poste {
+			.list_poste, .list_ecole {
 				margin-top: 5px;
 			}
 			.list_details {
