@@ -21,12 +21,12 @@
   </div>
 <!--<div class="menu-bg"></div>-->
 <div class="navigation">
-		<div class="menu-slide">
-      <div class="site-branding">
+		<div class="menu-slide stagger-tween">
+      <div class="site-branding stagger-tween-item">
         <h3><?php bloginfo('name'); ?></h3>
         <h2 class="text-gradient"><?php bloginfo('description'); ?></h2>
       </div>
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs stagger-tween-item" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" data-toggle="tab" href="#about" role="tab">Bio</a>
         </li>
@@ -36,7 +36,7 @@
       </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
+<div class="tab-content stagger-tween-item">
   <div class="tab-pane active" id="about" role="tabpanel">
     <p><?php the_field('bio', 'option'); ?></p>
   </div>
