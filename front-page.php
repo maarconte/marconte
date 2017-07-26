@@ -5,9 +5,11 @@
         <h1><?php bloginfo('name'); ?></h1>
         <h2 class="text-gradient"><?php bloginfo('description'); ?></h2>
     </div>
-    <a href="#portfolio" class="portfolio vertical-text align-self-center mx-auto"><h5 class="portfolio">portfolio</h5></a>
+    <a href="#portfolio" class="portfolio slide-link vertical-text align-self-center "><h5 class="portfolio">portfolio</h5></a>
 </div>
+<!-- Portfolio -->
 <div id="portfolio" class="content-area slide">
+     <a href="#homepage" class="slide-link vertical-text align-self-center "><h5 class="portfolio">Home</h5></a>
  <?php 
 
 $posts = get_posts(array(

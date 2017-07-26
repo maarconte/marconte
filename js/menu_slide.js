@@ -1,28 +1,32 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
 
-  jQuery( ".btn-burger" ).click(function() {
-    jQuery( this ).toggleClass( "active" );
-    jQuery(".navigation").toggleClass("opened");
+  $( ".btn-burger" ).click(function() {
+
+    $( this ).toggleClass( "active" );
+    $(".navigation").toggleClass("opened");
+    // $('.navigation > .menu-slide').children().each(function () {
+ 		// 	$(this).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+ 		// });
   });
 
-    jQuery( ".btn-burger" ).click(function() {
-      jQuery( ".menu-slide").animate({
+    $( ".btn-burger" ).click(function() {
+      $( ".menu-slide").animate({
                     width: "toggle"
                 });
   });
 
-  	jQuery('.portfolio').on('click', function() { // Au clic sur un élément
-			var page = jQuery(this).attr('href'); // Page cible
+  	$('.slide-link').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
 			var speed = 750; // Durée de l'animation (en ms)
-			var nav = jQuery('#portfolio').offset();
-			jQuery('html, body').animate( { scrollLeft: jQuery(page).offset().left - 85}, speed ); // Go
+			var nav = $('#portfolio').offset();
+			$('html, body').animate( { scrollLeft: $(page).offset().left - 85}, speed ); // Go
 			return false;
 		});
 });
 
-jQuery(window).on('load resize', function(){
-        var html = jQuery('html');
-        var el = jQuery('.resize');
+$(window).on('load resize', function(){
+        var html = $('html');
+        var el = $('.resize');
         var viewportwidth;
 
         if(typeof window.innerWidth!='undefined'){
@@ -60,3 +64,11 @@ jQuery(window).on('load resize', function(){
            el.removeClass("mobile");
         }
 });
+
+// $(document).ready(function () {
+//   var el = $('.navigation.opened .menu-slide');
+  
+// 	el.children().each(function () {
+// 			$(this).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+// 		});
+// });
