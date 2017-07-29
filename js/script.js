@@ -40,10 +40,16 @@ function fadeIn(parent, child) {
       var speed        = 750; // Animation duration
 
 			$('html, body').animate( { scrollLeft: pagePosition }, speed ); // Slide to target page
-			return false;
+      fadeIn($(page), $('.nav-item')); // Fade in nav-item in the portfolio
     });
 
-});
+//______________________Animate Portfolio___________________
+
+
+
+}); // Document.ready
+
+
 
 //_______________________Responsive_________________________
 
