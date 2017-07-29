@@ -2,10 +2,22 @@
 
 $(document).ready(function() {
 
-function fadeIn(parent, child) {
+function slideTop(parent, child) {
     parent.each(function() { // For each parent
       TweenMax.staggerFrom($(this).find(child), 1.3, { // Find children
         y: -40, // Slide form the top
+        autoAlpha: 0, // Opacity
+        delay: .2, // Delay before the animation should begin
+        ease: Elastic.easeInOut.config(1, .5)
+      },
+      0.3); // Amount of time in seconds before displaying each element
+    });
+}
+
+function slideRight(parent, child) {
+    parent.each(function() { // For each parent
+      TweenMax.staggerFrom($(this).find(child), 1.3, { // Find children
+        x: 40, // Slide form the right
         autoAlpha: 0, // Opacity
         delay: .2, // Delay before the animation should begin
         ease: Elastic.easeInOut.config(1, .5)
@@ -21,14 +33,14 @@ function fadeIn(parent, child) {
     $( this ).toggleClass( 'active' );
     $('.navigation').toggleClass('opened');
     $( '.menu-slide').animate({'width': 'toggle'}); // Open the menu
-    fadeIn($( '.navigation.opened .menu-slide'), '.stagger-tween-item'); // Fade in child elements from .menu-slide
+    slideTop($( '.navigation.opened .menu-slide'), '.stagger-tween-item'); // Fade in child elements from .menu-slide
   });
 
 //__________________Animate list-items CV___________________
 
   $('.nav-link').one('click', function(){ // On click on the CV link
    if (!$(this).hasClass("active")) { // If the CV link is not already active
-    fadeIn($( '.tab-content'), '.list-item'); // Fade in list-items from CV
+    slideTop($( '.tab-content'), '.list-item'); // Fade in list-items from CV
    }
   });
 
@@ -39,14 +51,12 @@ function fadeIn(parent, child) {
       var pagePosition = $(page).offset().left; // Target page position
       var speed        = 750; // Animation duration
 
-			$('html, body').animate( { scrollLeft: pagePosition }, speed ); // Slide to target page
-      fadeIn($(page), $('.nav-item')); // Fade in nav-item in the portfolio
-    });
+      $('html, body').animate( { scrollLeft: pagePosition }, speed ); // Slide to target page
 
 //______________________Animate Portfolio___________________
 
-
-
+      slideRight($(page), $('.nav-item')); // Fade in nav-item in the portfolio
+    });
 }); // Document.ready
 
 
