@@ -63,45 +63,45 @@ function slideRight(parent, child) {
 
 //_______________________Responsive_________________________
 
-$(window).on('load resize', function(){
-        var html = $('html');
-        var el   = $('.resize');
-        var sizeDesktop = 992;
-        var sizeTablet = 768;
-        var viewportwidth;
+// $(window).on('load resize', function(){
+//         var html = $('html');
+//         var el   = $('.resize');
+//         var sizeDesktop = 992;
+//         var sizeTablet = 768;
+//         var viewportwidth;
 
-        if(typeof window.innerWidth!='undefined'){
-              viewportwidth=window.innerWidth;
-        }
+//         if(typeof window.innerWidth!='undefined'){
+//               viewportwidth=window.innerWidth;
+//         }
 
-        // if(viewportwidth >= 1200){
-        //    html.addClass('desktop-xl');
-        //     slider.removeClass('col-md-12 mobile');
-        //    desc.removeClass('col-md-12 mobile');
-        // }else{
-        //    html.removeClass('desktop-xl');
-        // }
+//         // if(viewportwidth >= 1200){
+//         //    html.addClass('desktop-xl');
+//         //     slider.removeClass('col-md-12 mobile');
+//         //    desc.removeClass('col-md-12 mobile');
+//         // }else{
+//         //    html.removeClass('desktop-xl');
+//         // }
 
-        if(/* viewportwidth < 1200 &&  */ viewportwidth >= sizeDesktop){
-          html.addClass('desktop'); // Viewport is desktop
-          el.removeClass('col-md-12');
-        }else{
-           html.removeClass('desktop');
-        }
+//         if(/* viewportwidth < 1200 &&  */ viewportwidth >= sizeDesktop){
+//           html.addClass('desktop'); // Viewport is desktop
+//           el.removeClass('col-md-12');
+//         }else{
+//            html.removeClass('desktop');
+//         }
 
-        if(viewportwidth < sizeDesktop  && viewportwidth >= sizeTablet ){
-          html.addClass('tablet'); // Viewport is tablet
-          el.addClass('col-md-12 tablet');
-        }else{
-          html.removeClass('tablet');
-          el.removeClass('tablet');
-        }
+//         if(viewportwidth < sizeDesktop  && viewportwidth >= sizeTablet ){
+//           html.addClass('tablet'); // Viewport is tablet
+//           el.addClass('col-md-12 tablet');
+//         }else{
+//           html.removeClass('tablet');
+//           el.removeClass('tablet');
+//         }
 
-        if( viewportwidth < sizeTablet ){
-          html.addClass('mobile'); // Viewport is mobile
-          el.addClass('col-md-12 mobile');           
-        }else{
-          html.removeClass('mobile');
-          el.removeClass('mobile');
-        }
-});
+//         if( viewportwidth < sizeTablet ){
+//           html.addClass('mobile'); // Viewport is mobile
+//           el.addClass('col-md-12 mobile');           
+//         }else{
+//           html.removeClass('mobile');
+//           el.removeClass('mobile');
+//         }
+// });

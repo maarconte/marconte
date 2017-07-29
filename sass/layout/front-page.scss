@@ -1,6 +1,18 @@
-	.home {
+#page {
+    margin: 0 0 0 100px;
+}    
+
+.slide {
+  margin-left: 50px;
+  width:calc(100vw - 100px);
+  min-height:100vh;
+  float:left;
+  overflow: hidden;
+}
+
+.home {
         .content-area {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
                 h1 {
                 font-size: 2rem;
@@ -96,11 +108,4 @@
 
     }
 
-}
-
-.slide {
-  width:calc(100vw - 150px);
-  min-height:100%;
-  float:left;
-  overflow: hidden;
 }
