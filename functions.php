@@ -15,12 +15,12 @@ function wpt_register_js() {
 	wp_register_script( 'TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js');
 	wp_register_script( 'ScrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js');
 	wp_register_script( 'Animation', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js');
-	wp_register_script('slide_menu', get_template_directory_uri() . '/js/menu_slide.min.js');
+	wp_register_script('Script', get_template_directory_uri() . '/js/script.min.js');
 	wp_enqueue_script('jquery.bootstrap.min');
 	wp_enqueue_script( 'TweenMax' );
 	wp_enqueue_script( 'ScrollMagic' );
 	wp_enqueue_script( 'Animation' );
-    wp_enqueue_script('slide_menu');
+    wp_enqueue_script('Script');
 }
 add_action( 'init', 'wpt_register_js' );
 
