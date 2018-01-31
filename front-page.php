@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 <div id="homepage" class=" content-area slide">
     <div class="site-branding align-self-center">
@@ -21,7 +20,6 @@ if( $posts ): ?>
 <div class="tab-content">
     <?php 
         $i = 0;
-
         foreach( $posts as $post ): 		
 		setup_postdata( $post );		
 		?>
@@ -37,11 +35,9 @@ if( $posts ): ?>
         <div class="resize col-md-9 d-flex align-items-center portfolio_slider">
         <?php 
             $images = get_field('galerie');
-            if( $images ): ?>
-                
-                    
+            if( $images ): ?>    
                 <div id="carouselExampleIndicators" class="carousel mx-auto " data-ride="carousel">
-                    <ol class="carousel-indicators">
+<!--                     <ol class="carousel-indicators">
                         <?php 
                         $j = 0;
                         foreach( $images as $image ): ?>
@@ -49,7 +45,7 @@ if( $posts ): ?>
                         <?php 
                         $j++;
                         endforeach; ?>
-                    </ol>
+                    </ol> -->
                 
                 <div id="slider" class="carousel-inner" role="listbox">
                         <?php
