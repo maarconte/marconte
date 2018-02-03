@@ -91,15 +91,6 @@ gulp.task('makepot', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('browserSync', function() {
-  browserSync({
-    proxy: 'localhost/wordpress/',
-    port: 8080,
-    open: true,
-    notify: false
-  });
-});
-
 gulp.task('sass-watch',['sass'], browserSync.reload);
 
 gulp.task('watch', function () {

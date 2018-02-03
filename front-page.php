@@ -28,9 +28,28 @@ if( $posts ): ?>
         <div class="resize col-md-3 portfolio_txt">
                <h3 class="text-gradient "> <?php the_title()?></h3>
                <h5>Client</h5>
-               <p><?php the_field("client");?> </p>
+               <?php the_field("client");?>
                <h5>Mission</h5>
-               <p><?php the_field("mission");?> </p>
+               <?php the_field("mission");?>
+         
+               <?php 
+                $cats = get_the_category($id);
+                if($cats){
+               foreach ( $cats as $cat ): ?>
+                    <span  class="badge badge-pill badge-light">
+                    <?php echo $cat->name; ?>
+        </span>
+                <?php endforeach;   }?>
+             
+              
+               <?php
+$posttags = get_the_tags();
+if ($posttags) {
+  foreach($posttags as $tag) {?>
+   <span class="badge badge-pill badge-light"><?php echo $tag->name . ' '; ?></span>
+ <?php }
+} ?>
+               
         </div>
         <div class="resize col-md-9 d-flex align-items-center portfolio_slider">
         <?php 

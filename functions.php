@@ -182,7 +182,8 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'portfolios'),
-			'supports' => array( 'title','editor', 'author', 'thumbnail')
+			'supports' => array( 'title','thumbnail'),
+			'taxonomies' => array( 'category', 'post_tag' )
         )
     );
 }
