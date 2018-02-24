@@ -22,3 +22,48 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin breakpoint($point) {
+	@if $point == desktop {
+	  @media (min-width: 70em) { @content ; }
+   }
+	@else if $point == laptop {
+	  @media (min-width: 64em) { @content ; }
+   }
+	 @else if $point == tablet {
+	  @media (min-width: 50em) { @content ; }
+   }
+	@else if $point == phablet {
+	  @media (min-width: 37.5em)  { @content ; }
+   }
+   @else if $point == mobileonly {
+	  @media (max-width: 37.5em)  { @content ; }
+  
+   }
+  }
+  
+  @mixin ellipsis ($min-width){
+	display: inline-block;
+	min-width: $min-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	 width: 0;
+  }
+  
+  @mixin ratio($width, $height) {
+	position: relative;
+	&:before {
+	  display: block;
+	  content: "";
+	  width: 100%;
+	  padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+  }
