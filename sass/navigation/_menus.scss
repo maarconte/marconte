@@ -29,114 +29,6 @@ button, button:active {
   animation: fadeOut .2s forwards ease-in-out;
 }
 
-// .main-navigation {
-// 	clear: both;
-// 	display: block;
-// 	float: left;
-// 	width: 100%;
-
-// 	ul {
-// 		display: none;
-// 		list-style: none;
-// 		margin: 0;
-// 		padding-left: 0;
-
-// 		ul {
-// 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-// 			float: left;
-// 			position: absolute;
-// 			top: 1.5em;
-// 			left: -999em;
-// 			z-index: 99999;
-
-// 			ul {
-// 				left: -999em;
-// 				top: 0;
-// 			}
-
-// 			li {
-// 				&:hover > ul,
-// 				&.focus > ul {
-// 					left: 100%;
-// 				}
-// 			}
-
-// 			a {
-// 				width: 200px;
-// 			}
-
-// 			:hover > a,
-// 			.focus > a {
-// 			}
-
-// 			a:hover,
-// 			a.focus {
-// 			}
-// 		}
-
-// 		li:hover > ul,
-// 		li.focus > ul {
-// 			left: auto;
-// 		}
-// 	}
-
-// 	li {
-// 		float: left;
-// 		position: relative;
-
-// 		&:hover > a,
-// 		&.focus > a {
-// 		}
-// 	}
-
-// 	a {
-// 		display: block;
-// 		text-decoration: none;
-// 	}
-
-// 	.current_page_item > a,
-// 	.current-menu-item > a,
-// 	.current_page_ancestor > a,
-// 	.current-menu-ancestor > a {
-// 	}
-// }
-
-// /* Small menu. */
-// .menu-toggle,
-// .main-navigation.toggled ul {
-// 	display: block;
-// }
-
-// @media screen and (min-width: 37.5em) {
-// 	.menu-toggle {
-// 		display: none;
-// 	}
-// 	.main-navigation ul {
-// 		display: block;
-// 	}
-// }
-
-// .comment-navigation,
-// .posts-navigation,
-// .post-navigation {
-
-// 	.site-main & {
-// 		margin: 0 0 1.5em;
-// 		overflow: hidden;
-// 	}
-
-// 	.nav-previous {
-// 		float: left;
-// 		width: 50%;
-// 	}
-
-// 	.nav-next {
-// 		float: right;
-// 		text-align: right;
-// 		width: 50%;
-// 	}
-// }
-
 #sidebar {
     display: flex;
 	position: fixed;
@@ -272,22 +164,22 @@ button, button:active {
 	}
 	.list {
 		.list-item {
-			border: solid 1px $grey;
+           // border: solid 1px $grey;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 			padding: 10px;
 			display: flex;
-			margin-bottom: 15px;
+            margin-bottom: 15px;
+            align-content: center;
 			.list_logo {
-				width: 100px;
-				height: 100px;
-				margin-right: 10px;
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center center;
-			}
-			.list_caption {
-			//height: 120px;
-			display: flex;
-			flex-direction: column;
+                @include ratio(1,1);
+                margin-right: 10px;
+                width: 100px;
+                height: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
 			}
 			.list_txt {
 				margin-bottom: .8rem;

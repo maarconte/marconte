@@ -58,11 +58,15 @@
       $image = get_sub_field('logo');
       ?>
       <li class="list-item ">
-        <div style="background-image:url(<?php echo wp_get_attachment_image_url($image);?>)" class="list_logo"></div>
+        <div class="list_logo">
+          <div class="content">
+            <img src="<?php echo wp_get_attachment_image_url($image);?>" alt="<?php echo $image['alt'];?>">
+          </div>
+        </div>
         <div class="list_caption">
           <h6 class="list_txt list_poste"><?php the_sub_field('poste'); ?></h6>
-          <p class="list_txt list_entreprise"><?php the_sub_field('entreprise'); ?></p>
-          <p class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></p>
+          <p class="list_txt list_entreprise"><?php the_sub_field('entreprise'); ?> - <span class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></span>
+</p>
         </div>  
       </li>  
     <?php endwhile;
@@ -89,11 +93,14 @@
      
       ?>
       <li class="list-item ">
-        <div style="background-image:url(<?php echo $image['url'];?>)" class="list_logo"></div>
+        <div class="list_logo"> 
+          <div class="content">
+            <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
+          </div>
+        </div>
         <div class="list_caption">
           <h6 class="list_txt list_ecole"><?php the_sub_field('ecole'); ?></h6>
-          <p class="list_txt list_diplome"><?php the_sub_field('diplome'); ?></p>
-          <p class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></p>
+          <p class="list_txt list_diplome"><?php the_sub_field('diplome'); ?> - <span class="list_txt list_details"><?php the_sub_field('date'); ?> / <?php the_sub_field('lieu'); ?></span></p>
         </div>  
       </li>  
     <?php endwhile;
