@@ -23,7 +23,7 @@ foreach ($posts as $post):
     setup_postdata($post);?>
 	    <div class="tab-pane <?php if ($i == 0) {echo 'active';}?>" id="post-<?php the_ID();?>" role="tabpanel">
 	        <div class="row">
-                <div class="col-md-3 portfolio_txt">
+                <div class="col-xl-3 col-sm-5 portfolio_txt">
                     <h3 class="text-gradient "> <?php the_title()?></h3>
                     <h5>Client</h5>
                     <?php the_field("client");?>
@@ -45,7 +45,7 @@ foreach ($posts as $post):
                             <?php }
                         }?>
                 </div>
-                <div class="col-md-9 portfolio_slider">
+                <div class="col-xl-9 col-sm-7 portfolio_slider">
                 <?php
                 $images = get_field('galerie');
                 if ($images): ?>
@@ -54,7 +54,7 @@ foreach ($posts as $post):
                             <?php
                             $j = 0;
                             foreach ($images as $image): ?>
-                                <li data-target="#carousel-<?php the_ID();?>" data-slide-to="<?php echo $j ?>" class="<?php if ($j == 0 ) {echo 'active';}?>">O</li>
+                                <li data-target="#carousel-<?php the_ID();?>" data-slide-to="<?php echo $j ?>" class="<?php if ($j == 0 ) {echo 'active';}?>"></li>
                             <?php
                                 $j++;
                             endforeach;?>

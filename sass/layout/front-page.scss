@@ -52,6 +52,9 @@
         .portfolio_txt {
             height: 75vh;
             overflow: scroll;
+            & *:last-child {
+                margin-bottom: 30px;
+            }
         }
 
         .carousel {
