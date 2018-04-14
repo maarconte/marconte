@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "del": "^3.0.0",
+    "fullpage.js": "^2.9.7",
     "gulp-zip": "^4.1.0",
     "run-sequence": "^2.2.1",
     "zip": "^1.2.0"

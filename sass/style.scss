@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -56,13 +57,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and comment the line "@import "bootsrap/bootstrap"".
 --------------------------------------------------------------*/
 @import "vendor/bootstrap/bootstrap";
-//@import "vendor/bulma/bulma"
+@import "vendor/jquery.fullPage";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "vendor/normalize";
-@import "vendor/scroll-page";
+//@import "vendor/scroll-page";
 
 /*--------------------------------------------------------------
 # Components
@@ -85,6 +86,11 @@ and comment the line "@import "bootsrap/bootstrap"".
 --------------------------------------------------------------*/
 @import "modules/clearings";
 
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/layout";
 
 /*--------------------------------------------------------------
 # Pages
