@@ -155,12 +155,38 @@ require get_template_directory() . '/inc/jetpack.php';
 
 if( function_exists('acf_add_options_page') ) {
  
-	$option_page = acf_add_options_page(array(
-		'page_title' 	=> 'Profil',
-		'menu_title' 	=> 'Profil',
-		'menu_slug' 	=> 'profil',
+	acf_add_options_page(array(
+		'page_title' 	=> 'Sections',
+		'menu_title' 	=> 'Sections',
+		'menu_slug' 	=> 'sections',
 		'capability' 	=> 'edit_posts',
 		'redirect' 	=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Home',
+		'menu_title'	=> 'Home',
+		'parent_slug'	=> 'sections',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Services',
+		'menu_title'	=> 'Services',
+		'parent_slug'	=> 'sections',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Portfolio',
+		'menu_title'	=> 'Portfolio',
+		'parent_slug'	=> 'sections',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'About',
+		'menu_title'	=> 'About',
+		'parent_slug'	=> 'sections',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Contact',
+		'menu_title'	=> 'Contact',
+		'parent_slug'	=> 'sections',
 	));
  
 }
@@ -295,7 +321,7 @@ if( function_exists('acf_add_local_field_group') ):
 	
 	acf_add_local_field_group(array (
 		'key' => 'group_5968e9acd13c5',
-		'title' => 'Profil',
+		'title' => 'About',
 		'fields' => array (
 			array (
 				'key' => 'field_5968e9da7c4ef',
@@ -644,7 +670,7 @@ if( function_exists('acf_add_local_field_group') ):
 				array (
 					'param' => 'options_page',
 					'operator' => '==',
-					'value' => 'profil',
+					'value' => 'About',
 				),
 			),
 		),

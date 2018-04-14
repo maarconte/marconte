@@ -64,7 +64,7 @@ var imagesSRC               = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Sour
 var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = './sass/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var styleWatchFiles         = './sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './js/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
