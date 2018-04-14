@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package medusa
+ * @package marconte
  */
 
 ?><!DOCTYPE html>
@@ -23,6 +23,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php get_sidebar(); ?>
 <div id="page" class="site">
 	<div id="content" class="site-content">

@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package medusa
+ * @package marconte
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses medusa_header_style()
+ * @uses marconte_header_style()
  */
-function medusa_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'medusa_custom_header_args', array(
+function marconte_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'marconte_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'medusa_header_style',
+		'wp-head-callback'       => 'marconte_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'medusa_custom_header_setup' );
+add_action( 'after_setup_theme', 'marconte_custom_header_setup' );
 
-if ( ! function_exists( 'medusa_header_style' ) ) :
+if ( ! function_exists( 'marconte_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see medusa_custom_header_setup().
+ * @see marconte_custom_header_setup().
  */
-function medusa_header_style() {
+function marconte_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*
