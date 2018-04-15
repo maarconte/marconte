@@ -124,3 +124,24 @@
         }
     }
 }
+
+#section-home {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .jumbotron {
+        background-color: transparent;
+
+    }
+    h1{
+        font-size: 5vw !important;
+    }
+    h2{
+        font-size: 3vw !important;
+    }
+    @include breakpoint(mobileonly) {
+        h2{
+            font-size: 18px !important;
+        }
+    }
+}

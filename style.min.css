@@ -1061,7 +1061,14 @@ a:visited{color:purple}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-h1,h2,h3,h4,h5,h6{clear:both}
+h1,h2,h3,h4,h5,h6{clear:both;font-family:Quicksand;text-transform:uppercase}
+h1{font-size:2.5rem}
+h2{font-size:2rem}
+.mobile h2{font-size:1.5rem}
+h3{font-size:1.5rem}
+h4{font-size:1.5rem;font-family:FuturaSTD}
+h5{font-size:1.3 rem;font-family:FuturaSTD;margin-bottom:20px}
+h6{font-size:1rem;font-family:FuturaSTD;text-transform:capitalize;font-weight:bolder}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
 body{background:#fff}
@@ -1100,6 +1107,10 @@ big{font-size:125%}
 #section-contact .contact_form{background-color:#cf9e76;padding:50px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 #section-contact .contact_title{color:#fff;position:relative;padding-bottom:50px}
 #section-contact .contact_title:after{position:absolute;content:"";left:0;bottom:25px;height:2px;width:33%;left:33%;display:block;background-color:#fff}
+#section-home{background-repeat:no-repeat;background-size:cover;background-position:center center}
+#section-home .jumbotron{background-color:transparent}
+#section-home h1{font-size:5vw !important}
+#section-home h2{font-size:3vw !important}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .sticky{display:block}
@@ -1997,6 +2008,7 @@ embed,iframe,object{max-width:100%}
 #section-contact input{margin-bottom:5px}
 #section-contact textarea{height:158px}
 #section-contact label{font-size:9px}
+#section-home h2{font-size:18px !important}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}
