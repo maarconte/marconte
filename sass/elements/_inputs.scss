@@ -13,21 +13,33 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea.form-control {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	border: 2px solid $color__border-input;
 	border-radius: 3px;
-	padding: 3px;
+	background-color: transparent;
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 15px;
 
 	&:focus {
 		color: $color__text-input-focus;
+		background-color: #fff;
+		border-color: $color__border-input;
+
 	}
+}
+
+label {
+	color: #fff;
+	width: 100%;
+	font-weight: lighter;
 }
 
 select {
 	border: 1px solid $color__border-input;
 }
 
-textarea {
-	width: 100%;
+.wpcf7-form .row {
+	margin-right: inherit !important;
 }

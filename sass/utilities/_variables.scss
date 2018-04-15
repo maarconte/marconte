@@ -3,6 +3,8 @@
 =            Colors                           =
 =============================================*/
 
+$color_form: #CF9E76;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -11,8 +13,8 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
+$color__text-input: #fff;
+$color__text-input-focus:$color_form;
 $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
@@ -21,7 +23,7 @@ $color__text-main: #404040;
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
+$color__border-input: #fff;
 $color__border-abbr: #666;
 
 /*=====  End of Colors                 ======*/
@@ -41,7 +43,24 @@ $size__site-sidebar: 25%;
 =            Typography                       =
 =============================================*/
 
-$font__main: sans-serif;
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Book.otf");
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Light.otf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: FuturaSTD;
+    src: url("./fonts/FuturaStd-Book.otf");
+}
+
+$font__main: FuturaSTD;
+$font__heading: Quicksand;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

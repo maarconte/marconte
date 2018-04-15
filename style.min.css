@@ -18,7 +18,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*//*! Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com) Copyright 2011-2017 The Bootstrap Authors Copyright 2011-2017 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) *//*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+*/@font-face{font-family:Quicksand;src:url("./fonts/Quicksand_Book.otf")}
+@font-face{font-family:Quicksand;src:url("./fonts/Quicksand_Light.otf");font-weight:100}
+@font-face{font-family:FuturaSTD;src:url("./fonts/FuturaStd-Book.otf")}
+/*! Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com) Copyright 2011-2017 The Bootstrap Authors Copyright 2011-2017 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) *//*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,footer,header,nav,section{display:block}
 h1{font-size:2em;margin:.67em 0}
@@ -1037,19 +1040,22 @@ td,th{padding:0}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
 table{margin:0 0 1.5em;width:100%}
-ul,ol{margin:0 0 1.5em 3em}
+ul,ol{margin:0;padding:0}
 ul{list-style:disc}
 ol{list-style:decimal}
 li>ul,li>ol{margin-bottom:0;margin-left:1.5em}
 dt{font-weight:bold}
 dd{margin:0 1.5em 1.5em}
-button,input[type="button"],input[type="reset"],input[type="submit"]{border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;background:#e6e6e6;box-shadow:inset 0 1px 0 rgba(255,255,255,0.5),inset 0 15px 17px rgba(255,255,255,0.5),inset 0 -5px 12px rgba(0,0,0,0.05);color:rgba(0,0,0,0.8);font-size:12px;font-size:.75rem;line-height:1;padding:.6em 1em .4em;text-shadow:0 1px 0 rgba(255,255,255,0.8)}
-button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:#ccc #bbb #aaa;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
-button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus{border-color:#aaa #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
-input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea{color:#666;border:1px solid #ccc;border-radius:3px;padding:3px}
-input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus{color:#111}
-select{border:1px solid #ccc}
-textarea{width:100%}
+button,input[type="button"],input[type="reset"],input[type="submit"],.wpcf7-submit{min-width:100px;border:1px solid;border-color:#fff;border-radius:3px;background:#fff;font-weight:bold;font-size:12px;font-size:.75rem;line-height:1;padding:.6em;text-transform:uppercase}
+button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.wpcf7-submit:hover{border-color:#ccc #bbb #aaa;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
+button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus,.wpcf7-submit:active,.wpcf7-submit:focus{border-color:#aaa #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
+.wpcf7-submit{color:#cf9e76}
+.badge-pill{padding:10px}
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea.form-control{color:#fff;border:2px solid #fff;border-radius:3px;background-color:transparent;padding:5px;width:100%;margin-bottom:15px}
+input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea.form-control:focus{color:#cf9e76;background-color:#fff;border-color:#fff}
+label{color:#fff;width:100%;font-weight:lighter}
+select{border:1px solid #fff}
+.wpcf7-form .row{margin-right:inherit !important}
 a{color:royalblue}
 a:visited{color:purple}
 a:hover,a:focus,a:active{color:midnightblue}
@@ -1064,22 +1070,36 @@ blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
 img{height:auto;max-width:100%}
 figure{margin:1em 0}
-body,button,input,select,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,textarea{color:#404040;font-family:FuturaSTD;line-height:1.5;font-size:16px;font-size:1rem}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
 address{margin:0 0 1.5em}
-pre{background:#eee;font-family:"Courier 10 Pitch",Courier,monospace;font-size:15px;font-size:.9375rem;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}
+pre{background:#eee;font-family:"Courier 10 Pitch",Courier,monospace;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em;font-size:15px;font-size:.9375rem}
 code,kbd,tt,var{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;font-size:15px;font-size:.9375rem}
 abbr,acronym{border-bottom:1px dotted #666;cursor:help}
 mark,ins{background:#fff9c0;text-decoration:none}
 big{font-size:125%}
+.vertical-text{-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
 .clear:before::after,.clear:after::after,.entry-content:before::after,.entry-content:after::after,.comment-content:before::after,.comment-content:after::after,.site-header:before::after,.site-header:after::after,.site-content:before::after,.site-content:after::after,.site-footer:before::after,.site-footer:after::after{display:block;content:"";clear:both}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
 .site-footer{clear:both;width:100%}
+#section-contact{background-repeat:no-repeat;background-position:0 0;background-size:60%}
+#section-contact .fp-tableCell{height:inherit !important;display:block !important}
+#section-contact .row{height:100%}
+#section-contact ul.row{height:auto}
+#section-contact .section_title{position:absolute;height:100%}
+#section-contact .section_title h2{color:#fff}
+#section-contact .contact_social{background-color:rgba(207,158,118,0.8);-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
+#section-contact .contact_social li{list-style:none;color:#fff}
+#section-contact .contact_social li .social-icon{font-size:32px}
+#section-contact .contact_social li a{color:#fff !important}
+#section-contact .contact_form{background-color:#cf9e76;padding:50px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
+#section-contact .contact_title{color:#fff;position:relative;padding-bottom:50px}
+#section-contact .contact_title:after{position:absolute;content:"";left:0;bottom:25px;height:2px;width:33%;left:33%;display:block;background-color:#fff}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .sticky{display:block}
@@ -1964,6 +1984,19 @@ embed,iframe,object{max-width:100%}
 }@media(max-width:575px){.navbar-toggleable .navbar-nav .dropdown-menu{position:static;float:none}
 .navbar-toggleable>.container{padding-right:0;padding-left:0}
 .hidden-xs-down{display:none !important}
+}@media(max-width:37.5em){#section-contact{background-size:cover}
+#section-contact .contact_form{margin-bottom:15px;padding:15px 30px}
+#section-contact .contact_title{padding-bottom:30px !important}
+#section-contact .contact_title:after{bottom:15px !important}
+#section-contact .section_title{height:auto;display:block !important;left:37%}
+#section-contact .section_title h2{margin-top:10px;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);text-align:center}
+#section-contact .contact_social .row{height:auto}
+#section-contact .contact_social ul{margin-left:0 !important}
+#section-contact .contact_social ul li{padding:10px !important;font-size:12px;height:30px;margin-bottom:10px}
+#section-contact .contact_social ul li .social-icon{font-size:18px !important}
+#section-contact input{margin-bottom:5px}
+#section-contact textarea{height:158px}
+#section-contact label{font-size:9px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}
