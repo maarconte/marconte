@@ -1111,6 +1111,17 @@ big{font-size:125%}
 #section-home .jumbotron{background-color:transparent}
 #section-home h1{font-size:5vw !important}
 #section-home h2{font-size:3vw !important}
+#section-services .fp-tableCell{display:block}
+#section-services .top{height:25%;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative}
+#section-services .top h2{color:#fff;margin:6.7% 0 !important}
+#section-services .top .service-tabs{background-color:rgba(0,111,120,0.54);position:absolute;bottom:0;width:100%}
+#section-services .top .service-tabs .nav-item{padding:1rem}
+#section-services .top .service-tabs .nav-link{color:#fff;font-size:24px;border:0}
+#section-services .top .service-tabs .nav-link.active{background-color:transparent !important;position:relative}
+#section-services .top .service-tabs .nav-link.active:after{content:"";position:absolute;left:1rem;bottom:.25rem;width:calc(100% - 2rem);display:block;height:2px;background-color:#fff}
+#section-services .top .service-tabs .nav-link:hover{border:0}
+#section-services .top .service-tabs .nav-link:hover:not(.active){opacity:.8}
+#section-services .service-text{height:calc(100% - 25%)}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .sticky{display:block}
