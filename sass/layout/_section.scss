@@ -12,13 +12,6 @@
     ul.row {
         height: auto;
     }
-    .section_title {
-        position: absolute;
-        height: 100%;
-        h2 {
-            color: #fff;
-        }
-    }
     .contact_social {
         background-color: rgba($color: $color_form, $alpha: 0.8);
         flex-direction: column;
@@ -191,5 +184,76 @@
     }
     .service-text {
         height: calc(100% - #{$heigh-top});
+    }
+}
+
+#section-portfolio {
+    position: relative;
+    .tab-content {
+        height: 85vh;
+        position: relative;
+        overflow: hidden;
+        margin-left: 15% !important;
+    }
+    .carousel {
+        .carousel-inner {
+            @include ratio(16, 10);
+
+            .carousel-item {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .project-desc {
+        padding: 20px;
+    }
+    .list-projects {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        border: none;
+        height: 15vh;
+    }
+    .project-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: block;
+        height: 100%;
+        margin-right: 10px;
+        margin-bottom: 0;
+        padding: 0;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: $primary, $alpha: .9);
+        }
+
+        .nav-link {
+            color: white;
+            background-color: inherit;
+            border: none;
+            text-align: center;
+            line-height: 20vh;
+            padding: 0;
+        }
+    }
+
+}
+
+.section_title {
+    position: absolute;
+    height: 100%;
+    h2 {
+        color: #fff;
+        
     }
 }
