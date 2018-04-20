@@ -137,17 +137,30 @@
         background-size: cover;
         background-position: center center;
         position: relative;
-        h2 {
-            color: #fff;
-            margin: 6.7% 0 !important;
+        .title {
+            height: 60%;
+            h2 {
+                color: #fff;
+                margin: 0;
+            }
         }
         .service-tabs {
             background-color: rgba($color: #006F78, $alpha: .54);
             position: absolute;
             bottom: 0;
             width: 100%;
+            margin: 0 !important;
             .nav-item {
                 padding: 1rem;
+            }
+            @include breakpoint(mobileonly) {
+                .nav-item {
+                    padding: .2rem;
+                    .nav-link {
+                        padding: .3rem .5rem;
+                        font-size: 1.2rem;
+                    }
+                }
             }
             .nav-link {
                 color: #fff;
@@ -170,7 +183,7 @@
                 &:hover {
                     border: none;
                 }
-                &:hover:not(.active){
+                &:hover:not(.active) {
                     opacity: .8;
                 }
             }

@@ -46,13 +46,15 @@ get_header();?>
             </section>
             <section id="section-services"class="section">
                 <div class="top" style="background-image: url('<?php echo $service_bgc['url']; ?>')">
-                    <h2 class="text-center">Services</h2>
-                    <ul class="nav nav-tabs service-tabs" id="myTab" role="tablist">
+                <div class="title d-flex align-items-center justify-content-center">
+                    <h2 class="text-center">Préstations</h2>
+                </div>
+                    <ul class="nav nav-tabs service-tabs row" id="myTab" role="tablist">
                     <?php if (have_rows('social', 'option')):
                         // loop through the rows of data
                         $i = 0;
                         while (have_rows('service', 'option')): the_row();?>
-                            <li class="nav-item">
+                            <li class="nav-item col-4">
                                 <a class="nav-link text-center <?php if($i == 0):?> active <?php endif; ?>" id="home-tab" data-toggle="tab" href="#tab-<?= $i ?>" role="tab" aria-controls="home" aria-selected="true">
                                 <span><?=the_sub_field('icon');?></span>
                                     <?=the_sub_field('name');?></a>

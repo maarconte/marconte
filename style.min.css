@@ -1113,8 +1113,9 @@ big{font-size:125%}
 #section-home h2{font-size:3vw !important}
 #section-services .fp-tableCell{display:block}
 #section-services .top{height:25%;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative}
-#section-services .top h2{color:#fff;margin:6.7% 0 !important}
-#section-services .top .service-tabs{background-color:rgba(0,111,120,0.54);position:absolute;bottom:0;width:100%}
+#section-services .top .title{height:60%}
+#section-services .top .title h2{color:#fff;margin:0}
+#section-services .top .service-tabs{background-color:rgba(0,111,120,0.54);position:absolute;bottom:0;width:100%;margin:0 !important}
 #section-services .top .service-tabs .nav-item{padding:1rem}
 #section-services .top .service-tabs .nav-link{color:#fff;font-size:24px;border:0}
 #section-services .top .service-tabs .nav-link.active{background-color:transparent !important;position:relative}
@@ -2020,6 +2021,8 @@ embed,iframe,object{max-width:100%}
 #section-contact textarea{height:158px}
 #section-contact label{font-size:9px}
 #section-home h2{font-size:18px !important}
+#section-services .top .service-tabs .nav-item{padding:.2rem}
+#section-services .top .service-tabs .nav-item .nav-link{padding:.3rem .5rem;font-size:1.2rem}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}
