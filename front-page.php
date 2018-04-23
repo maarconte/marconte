@@ -84,7 +84,7 @@ get_header();?>
             <section id="section-portfolio"class="section">
                 <div class="row project-content align-items-center">
                     <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                            <h1 class="vertical-text" >Portfolio</h1>
+                            <h1 class="vertical-text section-title" >Portfolio</h1>
                     </div>
                     
                         <?php 
@@ -100,53 +100,52 @@ get_header();?>
                                 
                                     <div class="tab-pane <?php if ($i == 0) {echo 'active';}?>" id="post-<?php the_ID();?>" role="tabpanel">
                                     <div class="row">
-                                        <div class=" col-sm-3 project-desc">
-                                            <h2 class="text-gradient text-center "> <?php the_title()?></h2>
-                                            <div><?php the_field("client");?></div>
-                                            <h3>Mission</h3>
-                                            <div><?php the_field("mission");?></div>
-                                    <?php 
-                                    $cats = get_the_category($id);
-                                    $posttags = get_the_tags();
-                                    if ($cats) {
-                                        foreach ($cats as $cat): ?>
-                                            <span  class="badge-cat badge badge-pill badge-light"> <?= $cat->name; ?></span>
-                                        <?php endforeach;}?>
-                                    <?php if ($posttags) {
-                                            foreach ($posttags as $tag): ?>
-                                                <span class="badge-tag badge badge-pill badge-light"><?= $tag->name . ' '; ?></span>
-                                            <?php endforeach;}?>
-                                        </div>
                                         <div class="col-sm-9">
-                                        <div class="portfolio_slider">
-                                            <?php $images = get_field('galerie');
-                                            if ($images): ?>
-                                                <div id="carousel-<?php the_ID();?>" class="carousel mx-auto " data-ride="carousel">
-                                                    <ol class="carousel-indicators">
-                                                        <?php $j = 0;
-                                                            foreach ($images as $image): ?>
-                                                                <li data-target="#carousel-<?php the_ID();?>" data-slide-to="<?= $j ?>" class="<?php if ($j == 0) {echo 'active';}?>"></li>
-                                                            <?php $j++;
-                                                            endforeach;?>
-                                                    </ol>
-                                                        <div id="slider" class="carousel-inner" role="listbox">
-                                                            <div class="content">
-                                                                <?php $k = 0;
-                                                                    foreach ($images as $image): ?>
-                                                                        <div div class="carousel-item align-items-center <?php if ($k == 0) {echo 'active';}?>">
-                                                                            <img class="d-block " src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?> <?= $k ?>" />
-                                                                        </div>
-                                                                        <?php $k++;
-                                                                    endforeach;?>
+                                            <div class="portfolio_slider">
+                                                <?php $images = get_field('galerie');
+                                                if ($images): ?>
+                                                    <div id="carousel-<?php the_ID();?>" class="carousel mx-auto " data-ride="carousel">
+                                                        <ol class="carousel-indicators">
+                                                            <?php $j = 0;
+                                                                foreach ($images as $image): ?>
+                                                                    <li data-target="#carousel-<?php the_ID();?>" data-slide-to="<?= $j ?>" class="<?php if ($j == 0) {echo 'active';}?>"></li>
+                                                                <?php $j++;
+                                                                endforeach;?>
+                                                        </ol>
+                                                            <div id="slider" class="carousel-inner" role="listbox">
+                                                                <div class="content">
+                                                                    <?php $k = 0;
+                                                                        foreach ($images as $image): ?>
+                                                                            <div div class="carousel-item align-items-center <?php if ($k == 0) {echo 'active';}?>">
+                                                                                <img class="d-block " src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?> <?= $k ?>" />
+                                                                            </div>
+                                                                            <?php $k++;
+                                                                        endforeach;?>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                </div>
-                                        <?php endif;?>
+                                                    </div>
+                                            <?php endif;?>
+                                            </div> 
                                         </div>
-                                   
-                                </div>
+                                        <div class=" col-sm-3 project-desc">
+                                                    <h2 class="text-gradient text-center "> <?php the_title()?></h2>
+                                                    <div><?php the_field("client");?></div>
+                                                    <h3>Mission</h3>
+                                                    <div><?php the_field("mission");?></div>
+                                            <?php 
+                                            $cats = get_the_category($id);
+                                            $posttags = get_the_tags();
+                                            if ($cats) {
+                                                foreach ($cats as $cat): ?>
+                                                    <span  class="badge-cat badge badge-pill badge-light"> <?= $cat->name; ?></span>
+                                                <?php endforeach;}?>
+                                            <?php if ($posttags) {
+                                                    foreach ($posttags as $tag): ?>
+                                                        <span class="badge-tag badge badge-pill badge-light"><?= $tag->name . ' '; ?></span>
+                                                    <?php endforeach;}?>
                                         </div>
                                     </div>
+                                </div>
                                         
                             <?php $i++;
                             endforeach;?>

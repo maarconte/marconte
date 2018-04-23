@@ -1138,7 +1138,6 @@ big{font-size:125%}
 #section-portfolio .list-projects .nav{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;border:0}
 #section-portfolio .project-item{background-repeat:no-repeat;background-size:cover;background-position:center center;display:block;height:15vh;margin-right:10px;margin-bottom:0;padding:0;position:relative}
 #section-portfolio .project-item .nav-link{color:white;background-color:inherit;border:0;text-align:center;line-height:15vh;padding:0;background-color:rgba(59,178,184,0.9)}
-#section-portfolio .section_title h2{margin:10% 0}
 .section_title{position:absolute;height:100%}
 .section_title h2{color:#fff}
 .widget{margin:0 0 1.5em}
@@ -2041,6 +2040,8 @@ embed,iframe,object{max-width:100%}
 #section-home h2{font-size:18px !important}
 #section-services .top .service-tabs .nav-item{padding:.2rem}
 #section-services .top .service-tabs .nav-item .nav-link{padding:.3rem .5rem;font-size:1.2rem}
+#section-portfolio .project-content{padding-right:0;margin:0}
+#section-portfolio .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}

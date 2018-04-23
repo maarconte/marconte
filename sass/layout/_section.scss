@@ -193,6 +193,12 @@
         height: 85vh;
         overflow: hidden;
         padding-right: 30px;
+        @include breakpoint(mobileonly) {
+            &{
+                padding-right: 0;
+                margin: 0;
+            }
+        }
     }
     .tab-content {
         position: relative;
@@ -257,9 +263,13 @@
             background-color: rgba($color: $primary, $alpha: .9);
         }
     }
-    .section_title {
-        h2 {
-            margin: 10% 0;  
+    .section-title {
+        @include breakpoint(mobileonly) {
+            &{
+                transform: inherit;
+                margin: 5px;
+               // font-size: 18px;
+            }
         }
     }
 }
