@@ -1,17 +1,21 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-        sectionsColor: ['#fff', '#fff', '#fff','#F7F8F3', '#E5B542'],
+		sectionsColor: ['#fff', '#fff', '#fff','#F7F8F3', '#E5B542'],
+		anchors:['firstPage', 'secondPage', 'thirdPage'],
+		navigation: true,
+		slidesNavigation: true,
+		slidesNavPosition: 'bottom',
         //Scrolling
 		css3: true,
-		scrollingSpeed: 700,
+		scrollingSpeed: 1000,
 		autoScrolling: true,
 		fitToSection: true,
-		fitToSectionDelay: 1000,
-		scrollBar: false,
+		fitToSectionDelay: 5000,
+		scrollBar: true,
 		easing: 'easeInOutBack',
 		easingcss3: 'ease',
-		loopBottom: true,
-		loopTop: true,
+		loopBottom: false,
+		loopTop: false,
 		loopHorizontal: true,
 		continuousVertical: false,
 		continuousHorizontal: false,
@@ -25,7 +29,9 @@ $(document).ready(function() {
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null,
 		touchSensitivity: 15,
+		normalScrollElements: '.list-projects',
 		normalScrollElementTouchThreshold: 5,
 		bigSectionsDestination: null,
+		lazyLoading: true,
     });
 });

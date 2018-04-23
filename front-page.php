@@ -37,7 +37,7 @@ get_header();?>
             <section id="section-home"class="section"style="background-image: url('<?= $home_background['url']; ?>')">
                 <div class="jumbotron">
                     <div class="container text-center">
-                        <img src="<?= get_template_directory_uri(); ?>/img/marconte_logo.svg" alt="marconte" class="mb-3" style="width:200px;">
+                        <img data-src="<?= get_template_directory_uri(); ?>/img/marconte_logo.svg" alt="marconte" class="mb-3" style="width:200px;">
                         <h1><?=$site_title?></h1>
                         <h2><?=$site_description?></h2>
                     </div>
@@ -98,9 +98,9 @@ get_header();?>
                            <?php foreach ($posts as $post):
                                 setup_postdata($post);?>
                                 
-                                    <div class="tab-pane <?php if ($i == 0) {echo 'active';}?>" id="post-<?php the_ID();?>" role="tabpanel">
+                                    <div class="slide <?php if ($i == 0) {echo 'active';}?>" id="post-<?php the_ID();?>" role="tabpanel">
                                     <div class="row">
-                                        <div class="col-sm-9">
+                                        <div class="col-md-9">
                                             <div class="portfolio_slider">
                                                 <?php $images = get_field('galerie');
                                                 if ($images): ?>
@@ -117,7 +117,7 @@ get_header();?>
                                                                     <?php $k = 0;
                                                                         foreach ($images as $image): ?>
                                                                             <div div class="carousel-item align-items-center <?php if ($k == 0) {echo 'active';}?>">
-                                                                                <img class="d-block " src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?> <?= $k ?>" />
+                                                                                <img class="d-block " data-src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?> <?= $k ?>" />
                                                                             </div>
                                                                             <?php $k++;
                                                                         endforeach;?>
@@ -127,7 +127,7 @@ get_header();?>
                                             <?php endif;?>
                                             </div> 
                                         </div>
-                                        <div class=" col-sm-3 project-desc">
+                                        <div class=" col-md-3 project-desc">
                                                     <h2 class="text-gradient text-center "> <?php the_title()?></h2>
                                                     <div><?php the_field("client");?></div>
                                                     <h3>Mission</h3>
@@ -152,7 +152,7 @@ get_header();?>
                     </div>
                         <?php endif;?>
                 </div>
-                <div class="list-projects">
+<!--                 <div class="list-projects">
                     <ul class="row  nav nav-tabs" role="tablist">
                     <?php 
                     $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -163,7 +163,7 @@ get_header();?>
                         </li>
                     <?php endforeach;?>
                     </ul>
-                </div>
+                </div> -->
             </section>
             <section id="section-about"class="section">About</section>
             <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">

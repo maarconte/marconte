@@ -1124,7 +1124,7 @@ big{font-size:125%}
 #section-services .top .service-tabs .nav-link:hover:not(.active){opacity:.8}
 #section-services .service-text{height:calc(100% - 25%)}
 #section-portfolio{position:relative}
-#section-portfolio .project-content{height:85vh;overflow:hidden;padding-right:30px}
+#section-portfolio .project-content{overflow:hidden;padding-right:30px;margin:0}
 #section-portfolio .tab-content{position:relative}
 #section-portfolio .carousel .carousel-indicators{position:absolute;left:97%;top:5%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0;height:75%;width:20px}
 #section-portfolio .carousel .carousel-indicators li{width:15px;margin-bottom:5px}
@@ -2040,7 +2040,7 @@ embed,iframe,object{max-width:100%}
 #section-home h2{font-size:18px !important}
 #section-services .top .service-tabs .nav-item{padding:.2rem}
 #section-services .top .service-tabs .nav-item .nav-link{padding:.3rem .5rem;font-size:1.2rem}
-#section-portfolio .project-content{padding-right:0;margin:0}
+#section-portfolio .project-content{padding-right:0}
 #section-portfolio .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}

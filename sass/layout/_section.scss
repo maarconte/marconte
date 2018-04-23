@@ -190,13 +190,13 @@
 #section-portfolio {
     position: relative;
     .project-content {
-        height: 85vh;
+      //  height: 85vh;
         overflow: hidden;
         padding-right: 30px;
+        margin: 0;
         @include breakpoint(mobileonly) {
             &{
-                padding-right: 0;
-                margin: 0;
+                padding-right: 0;     
             }
         }
     }
