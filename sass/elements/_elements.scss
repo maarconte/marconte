@@ -115,3 +115,24 @@ big {
 .vertical-text {
 	transform: rotate(-90deg);
 }
+
+
+/*=============================================
+=            Badges                           =
+=============================================*/
+
+.badge-cat {
+	background-color: $primary !important;
+	color: #fff !important;
+	font-weight: 400;
+}
+
+.badge-tag {
+	background-color: rgba($color: $primary, $alpha: .7) !important;
+	color: #fff !important;
+	font-weight: 400;
+}
+
+/*=====  End of Badges                 ======*/
+
+

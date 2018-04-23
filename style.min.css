@@ -1088,6 +1088,8 @@ abbr,acronym{border-bottom:1px dotted #666;cursor:help}
 mark,ins{background:#fff9c0;text-decoration:none}
 big{font-size:125%}
 .vertical-text{-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}
+.badge-cat{background-color:#3bb2b8 !important;color:#fff !important;font-weight:400}
+.badge-tag{background-color:rgba(59,178,184,0.7) !important;color:#fff !important;font-weight:400}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
@@ -1122,16 +1124,21 @@ big{font-size:125%}
 #section-services .top .service-tabs .nav-link:hover:not(.active){opacity:.8}
 #section-services .service-text{height:calc(100% - 25%)}
 #section-portfolio{position:relative}
-#section-portfolio .tab-content{height:85vh;position:relative;overflow:hidden;margin-left:15% !important}
+#section-portfolio .project-content{height:85vh;overflow:hidden;padding-right:30px}
+#section-portfolio .tab-content{position:relative}
+#section-portfolio .carousel .carousel-indicators{position:absolute;left:97%;top:5%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0;height:75%;width:20px}
+#section-portfolio .carousel .carousel-indicators li{width:15px;margin-bottom:5px}
 #section-portfolio .carousel .carousel-inner{position:relative}
-#section-portfolio .carousel .carousel-inner:before{display:block;content:"";width:100%;padding-top:62.5%}
+#section-portfolio .carousel .carousel-inner:before{display:block;content:"";width:100%;padding-top:56.25%}
 #section-portfolio .carousel .carousel-inner>.content{position:absolute;top:0;left:0;right:0;bottom:0}
+#section-portfolio .carousel .carousel-inner .carousel-item{height:100%}
 #section-portfolio .carousel .carousel-inner .carousel-item img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
 #section-portfolio .project-desc{padding:20px}
-#section-portfolio .list-projects{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow:scroll;border:0;height:15vh}
-#section-portfolio .project-item{background-repeat:no-repeat;background-size:cover;background-position:center center;display:block;height:100%;margin-right:10px;margin-bottom:0;padding:0}
-#section-portfolio .project-item::after{content:' ';position:absolute;top:0;left:0;height:100%;width:100%;background-color:rgba(59,178,184,0.9)}
-#section-portfolio .project-item .nav-link{color:white;background-color:inherit;border:0;text-align:center;line-height:20vh;padding:0}
+#section-portfolio .list-projects{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow:scroll;border:0}
+#section-portfolio .list-projects .nav{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;border:0}
+#section-portfolio .project-item{background-repeat:no-repeat;background-size:cover;background-position:center center;display:block;height:15vh;margin-right:10px;margin-bottom:0;padding:0;position:relative}
+#section-portfolio .project-item .nav-link{color:white;background-color:inherit;border:0;text-align:center;line-height:15vh;padding:0;background-color:rgba(59,178,184,0.9)}
+#section-portfolio .section_title h2{margin:10% 0}
 .section_title{position:absolute;height:100%}
 .section_title h2{color:#fff}
 .widget{margin:0 0 1.5em}
