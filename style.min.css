@@ -1077,7 +1077,7 @@ blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
 img{height:auto;max-width:100%}
 figure{margin:1em 0}
-body,button,input,select,textarea{color:#404040;font-family:FuturaSTD;line-height:1.5;font-size:16px;font-size:1rem}
+html,body,button,input,select,textarea{color:#404040;font-family:FuturaSTD;line-height:1.5;font-size:16px;font-size:1rem}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
