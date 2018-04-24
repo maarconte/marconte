@@ -2,51 +2,6 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 60%;
-    .fp-tableCell {
-        height: inherit !important;
-        display: block !important;
-    }
-    .row {
-        height: 100%;
-    }
-    ul.row {
-        height: auto;
-    }
-    .contact_social {
-        background-color: rgba($color: $color_form, $alpha: 0.8);
-        flex-direction: column;
-        li {
-            list-style: none;
-            color: #fff;
-            .social-icon {
-                font-size: 32px;
-            }
-            a {
-                color: #fff !important;
-            }
-        }
-    }
-    .contact_form {
-        background-color: $color_form;
-        padding: 50px;
-        flex-direction: column;
-    }
-    .contact_title {
-        color: #fff;
-        position: relative;
-        padding-bottom: 50px;
-        &:after {
-            position: absolute;
-            content: "";
-            left: 0;
-            bottom: 25px;
-            height: 2px;
-            width: 33%;
-            left: 33%;
-            display: block;
-            background-color: #fff;
-        }
-    }
     @include breakpoint(mobileonly) {
         background-size: cover;
         .contact_form {
@@ -60,12 +15,13 @@
             }
         }
         .section_title {
-            height: auto;
             display: block !important;
             left: 37%;
+            height: auto;
             h2 {
                 margin-top: 10px;
-                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
                 text-align: center;
             }
         }
@@ -96,12 +52,68 @@
             font-size: 9px;
         }
     }
+    .fp-tableCell {
+        display: block !important;
+        height: inherit !important;
+    }
+    .row {
+        height: 100%;
+    }
+    ul.row {
+        height: auto;
+    }
+    .contact_social {
+        background-color: rgba($color: $color_form, $alpha: 0.8);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        li {
+            list-style: none;
+            color: #fff;
+            .social-icon {
+                font-size: 32px;
+            }
+            a {
+                color: #fff !important;
+            }
+        }
+    }
+    .contact_form {
+        background-color: $color_form;
+        padding: 50px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .contact_title {
+        position: relative;
+        color: #fff;
+        padding-bottom: 50px;
+        &:after {
+            display: block;
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            left: 33%;
+            content: "";
+            height: 2px;
+            width: 33%;
+            background-color: #fff;
+        }
+    }
 }
 
 #section-home {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    @include breakpoint(mobileonly) {
+        h2 {
+            font-size: 18px !important;
+        }
+    }
     .jumbotron {
         background-color: transparent;
     }
@@ -111,11 +123,6 @@
     h2 {
         font-size: 3vw !important;
     }
-    @include breakpoint(mobileonly) {
-        h2 {
-            font-size: 18px !important;
-        }
-    }
 }
 
 #section-services {
@@ -124,12 +131,12 @@
         display: block;
     }
     .top {
+        position: relative;
         height: $heigh-top;
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        position: relative;
         .title {
             height: 60%;
             h2 {
@@ -138,14 +145,11 @@
             }
         }
         .service-tabs {
-            background-color: rgba($color: #006F78, $alpha: .54);
             position: absolute;
             bottom: 0;
+            background-color: rgba($color: #006F78, $alpha: .54);
             width: 100%;
             margin: 0 !important;
-            .nav-item {
-                padding: 1rem;
-            }
             @include breakpoint(mobileonly) {
                 .nav-item {
                     padding: .2rem;
@@ -155,20 +159,23 @@
                     }
                 }
             }
+            .nav-item {
+                padding: 1rem;
+            }
             .nav-link {
                 color: #fff;
                 font-size: 24px;
                 border: none;
                 &.active {
-                    background-color: transparent !important;
                     position: relative;
+                    background-color: transparent !important;
                     &:after {
-                        content: "";
-                        position: absolute;
-                        left: 1rem;
-                        bottom: .25rem;
-                        width: calc(100% - 2rem);
                         display: block;
+                        position: absolute;
+                        bottom: .25rem;
+                        left: 1rem;
+                        content: "";
+                        width: calc(100% - 2rem);
                         height: 2px;
                         background-color: #fff;
                     }
@@ -190,25 +197,29 @@
 #section-portfolio {
     position: relative;
     .project-content {
-      //  height: 85vh;
+        //  height: 85vh;
         overflow: hidden;
         padding-right: 30px;
         margin: 0;
         @include breakpoint(mobileonly) {
-            &{
-                padding-right: 0;     
+            & {
+                padding-right: 0;
             }
         }
     }
     .tab-content {
         position: relative;
     }
+    /*----------  Carrousel  ----------*/
     .carousel {
         .carousel-indicators {
             position: absolute;
-            left: 97%;
             top: 5%;
-            flex-direction: column;
+            left: 97%;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin: 0;
             height: 75%;
             width: 20px;
@@ -219,13 +230,13 @@
         }
         .carousel-inner {
             @include ratio(16, 9);
-
             .carousel-item {
                 height: 100%;
                 img {
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
             }
         }
@@ -233,7 +244,40 @@
     .project-desc {
         padding: 20px;
     }
-    .list-projects {
+    /*----------  Slide  ----------*/
+    .slide {
+        padding: 0 30px;
+    }
+    .fp-controlArrow {
+        display: none;
+/*         top: inherit;
+        bottom: 10%;
+        color: transparent;
+        border: none;
+        &:before {
+            position: absolute;
+            color: #006F78;
+            font-size: 36px;
+        } */
+    }
+  /*   .fp-controlArrow.fp-next:before {
+        content: ">";
+    }
+    .fp-controlArrow.fp-prev:before {
+        content: "<";
+    } */
+    .fp-slidesNav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    /*   .list-projects {
         flex-wrap: nowrap;
         overflow: scroll;
         border: none;
@@ -262,13 +306,13 @@
             padding: 0;
             background-color: rgba($color: $primary, $alpha: .9);
         }
-    }
+    } */
     .section-title {
         @include breakpoint(mobileonly) {
-            &{
-                transform: inherit;
-                margin: 5px;
-               // font-size: 18px;
+            & {
+                -webkit-transform: inherit;
+                        transform: inherit;
+                margin: 5px; // font-size: 18px;
             }
         }
     }
@@ -279,6 +323,5 @@
     height: 100%;
     h2 {
         color: #fff;
-
     }
 }
