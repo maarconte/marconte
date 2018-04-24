@@ -1064,7 +1064,6 @@ a:hover,a:active{outline:0}
 h1,h2,h3,h4,h5,h6{clear:both;font-family:Quicksand;text-transform:uppercase}
 h1{font-size:2.5rem}
 h2{font-size:2rem}
-.mobile h2{font-size:1.5rem}
 h3{font-size:1.5rem}
 h4{font-size:1.5rem;font-family:FuturaSTD}
 h5{font-size:1.3 rem;font-family:FuturaSTD;margin-bottom:20px}
@@ -1077,7 +1076,7 @@ blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
 img{height:auto;max-width:100%}
 figure{margin:1em 0}
-html,body,button,input,select,textarea{color:#404040;font-family:FuturaSTD;line-height:1.5;font-size:16px;font-size:1rem}
+html,body,button,input,select,textarea{color:#404040;font-family:FuturaSTD;line-height:1.5;font-size:16px}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1128,7 +1127,7 @@ big{font-size:125%}
 #section-services .top .service-tabs .nav-link:hover:not(.active){opacity:1}
 #section-services .service-text{height:calc(100% - 25%)}
 #section-portfolio{position:relative}
-#section-portfolio .project-content{overflow:hidden;padding-right:30px;margin:0}
+#section-portfolio .project-content{height:calc(100vh - 33px);overflow:hidden;padding-right:30px;margin:0}
 #section-portfolio .tab-content{position:relative}
 #section-portfolio .carousel .carousel-indicators{position:absolute;top:5%;left:97%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column;margin:0;height:75%;width:20px}
 #section-portfolio .carousel .carousel-indicators li{width:15px;margin-bottom:5px}
@@ -2018,6 +2017,7 @@ embed,iframe,object{max-width:100%}
 }@media(max-width:1199px){.navbar-toggleable-lg .navbar-nav .dropdown-menu{position:static;float:none}
 .navbar-toggleable-lg>.container{padding-right:0;padding-left:0}
 .hidden-lg-down{display:none !important}
+}@media(max-width:1000px){html,body,button,input,select,textarea{font-size:calc(12px + .4vw)}
 }@media(max-width:991px){.navbar-toggleable-md .navbar-nav .dropdown-menu{position:static;float:none}
 .navbar-toggleable-md>.container{padding-right:0;padding-left:0}
 .hidden-md-down{display:none !important}
@@ -2043,7 +2043,11 @@ embed,iframe,object{max-width:100%}
 #section-home h2{font-size:18px !important}
 #section-services .top .service-tabs .nav-item{padding:.2rem}
 #section-services .top .service-tabs .nav-item .nav-link{padding:.3rem .5rem;font-size:1.2rem}
+#section-portfolio .fp-tableCell{display:block}
 #section-portfolio .project-content{padding-right:0}
+#section-portfolio .slide{padding:0 10px}
+#section-portfolio .fp-slidesNav.bottom{bottom:5px}
+#section-portfolio #fp-nav.right{right:0}
 #section-portfolio .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
