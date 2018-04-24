@@ -14,10 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'marconte' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'marconte' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'marconte' ), 'marconte', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+		<div class="site-info col-sm-4">
+			<div class="row align-items-center">
+				<div class="col-2 footer-logo">
+					<img src="<?= get_template_directory_uri(); ?>/img/marconte_logo5.svg" alt="marconte">
+				</div>
+				<div class="col-10 footer-text">
+					<span>Thème Wordpress crée par <a href="#">Mathilde Arconte</a></span>
+					<span class="sep"> | </span>
+					<a href="#">Mentions Légales</a>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
