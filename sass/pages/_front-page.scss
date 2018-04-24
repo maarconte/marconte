@@ -131,6 +131,12 @@
             background-color: #fff;
         }
     }
+/* 
+    .empty-space {
+        @include breakpoint(mobileonly) {
+           height: 50px;
+        }
+    } */
 }
 
 #section-home {
@@ -403,23 +409,16 @@
             background-color: rgba($color: $primary, $alpha: .9);
         }
     } */
-    .section-title {
-        @include breakpoint(mobileonly) {
-            & {
-                -webkit-transform: inherit;
-                transform: inherit;
-                margin: 5px; // font-size: 18px;
-           
-            }
-        }
-    }
 }
 
-.section_title {
-    position: absolute;
-    height: 100%;
 
-    h2 {
-        color: #fff;
+.section-title {
+    @include breakpoint(mobileonly) {
+        & {
+            -webkit-transform: inherit;
+            transform: inherit;
+            margin: 5px; // font-size: 18px;
+       
+        }
     }
 }

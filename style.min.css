@@ -1094,11 +1094,6 @@ big{font-size:125%}
 #content[tabindex="-1"]:focus{outline:0}
 .clear:before::after,.clear:after::after,.entry-content:before::after,.entry-content:after::after,.comment-content:before::after,.comment-content:after::after,.site-header:before::after,.site-header:after::after,.site-content:before::after,.site-content:after::after,.site-footer:before::after,.site-footer:after::after{display:block;content:"";clear:both}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
-.site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
-.site-footer a{color:#fff}
-.site-footer .row{margin:0}
-.site-footer .footer-logo img{width:30px;margin:0 auto;display:block}
-.site-footer .footer-text{padding:0}
 #page{position:relative}
 #section-contact{background-repeat:no-repeat;background-position:0 0;background-size:60%}
 #section-contact .fp-tableCell{display:block !important;height:inherit !important}
@@ -1140,8 +1135,11 @@ big{font-size:125%}
 #section-portfolio .slide{padding:0 30px}
 #section-portfolio .fp-controlArrow{display:none}
 #section-portfolio .fp-slidesNav{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}
-.section_title{position:absolute;height:100%}
-.section_title h2{color:#fff}
+.site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
+.site-footer a{color:#fff}
+.site-footer .row{margin:0}
+.site-footer .footer-logo img{width:30px;margin:0 auto;display:block}
+.site-footer .footer-text{padding:0}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .sticky{display:block}
@@ -2048,7 +2046,7 @@ embed,iframe,object{max-width:100%}
 #section-portfolio .slide{padding:0 10px}
 #section-portfolio .fp-slidesNav.bottom{bottom:5px}
 #section-portfolio #fp-nav.right{right:0}
-#section-portfolio .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
+.section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}

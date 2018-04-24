@@ -167,11 +167,13 @@ get_header();?>
             </section>
             <section id="section-about"class="section">About</section>
             <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
-                <div class="d-flex section_title">
-                    <h2 class="vertical-text align-self-center" >Contact</h2>
-                </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
+<div class="row">
+    <div class="col-sm-1 d-flex align-items-center justify-content-center">
+                <h1 class="vertical-text section-title" style="color:#fff">Contact</h1>
+        </div>
+<div class="col-sm-11">
+<div class="row">
+                        <div class="col-sm-4 empty-space"></div>
                         <div class="col-sm-8 ">
                             <div class="row">
                                 <div class="col-sm-4  contact_social d-flex justify-content-center">
@@ -209,7 +211,23 @@ get_header();?>
 
                         </div>
                     </div>
-
+</div>
+</div>
+                
+<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info col-sm-4">
+			<div class="row align-items-center">
+				<div class="col-2 footer-logo">
+					<img src="<?= get_template_directory_uri(); ?>/img/marconte_logo5.svg" alt="marconte">
+				</div>
+				<div class="col-10 footer-text">
+					<span>Thème Wordpress crée par <a href="#">Mathilde Arconte</a></span>
+					<span class="sep"> | </span>
+					<a href="#">Mentions Légales</a>
+				</div>
+			</div>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
             </section>
         </div>
     </main>
