@@ -172,43 +172,43 @@ get_header();?>
                 </div> -->
             </section>
             <section id="section-about"class="section">
-            <div class="row">
-                <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                    <h1 class="vertical-text section-title"><?= $about_txt ?></h1>
-                </div>
-                <div class=" about-bio col-sm-8 d-flex align-items-center">
-                        <div>
-                            <?= $about_bio ?> 
-                        </div>
-                </div>
-                <div class="col-sm-3">
-                        <div class="about-img">
-                            <div class="content">
-                                <img src="<?= $about_img['url']; ?>" alt="marconte">
-                            </div>
-                        </div>
-                        <div class="about-skills">
-                            <div class="mb-2">
-                                <h2>Connaissances du secteur</h2>
-                               <?php if( $knowledges ): ?>
-                                    <?php foreach( $knowledges as $k ):
-                                        $tag = get_tag($k);?>
-                                        <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
-                                    <?php endforeach; ?>
-                                <?php endif ?>
-                            </div>
+                <div class="row">
+                    <div class="col-sm-1 d-flex align-items-center justify-content-center">
+                        <h1 class="vertical-text section-title"><?= $about_txt ?></h1>
+                    </div>
+                    <div class=" about-bio col-sm-8 d-flex align-items-center">
                             <div>
-                                <h2>Outils et tecnhologies</h2>
-                               <?php if( $tools ): ?>
-                                    <?php foreach( $tools as $t ):
-                                    $tag = get_tag($t);?>
-                                        <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
-                                    <?php endforeach; ?>
-                                <?php endif ?>
+                                <?= $about_bio ?> 
                             </div>
-                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                            <div class="about-img">
+                                <div class="content">
+                                    <img src="<?= $about_img['url']; ?>" alt="marconte">
+                                </div>
+                            </div>
+                            <div class="about-skills">
+                                <div class="mb-2">
+                                    <h2>Connaissances du secteur</h2>
+                                <?php if( $knowledges ): ?>
+                                        <?php foreach( $knowledges as $k ):
+                                            $tag = get_tag($k);?>
+                                            <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
+                                        <?php endforeach; ?>
+                                    <?php endif ?>
+                                </div>
+                                <div>
+                                    <h2>Outils et tecnhologies</h2>
+                                <?php if( $tools ): ?>
+                                        <?php foreach( $tools as $t ):
+                                        $tag = get_tag($t);?>
+                                            <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
+                                        <?php endforeach; ?>
+                                    <?php endif ?>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-            </div>
             </section>
             <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
                 <div class="row">
@@ -233,8 +233,9 @@ get_header();?>
                                                 // loop through the rows of data
                                                 while (have_rows('social', 'option')): the_row();?>
                                                     <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                                    <a href=" <?=the_sub_field('link');?>" target="_blank">
                                                         <span class="social-icon mr-2" > <?=the_sub_field('icon');?></span>
-                                                        <a href=" <?=the_sub_field('link');?>" target="_blank"><?=the_sub_field('text');?></a>
+                                                        <?=the_sub_field('text');?></a>
                                                     </li>
                                                 <?php endwhile;
 
