@@ -176,12 +176,12 @@ get_header();?>
                     <div class="col-sm-1 d-flex align-items-center justify-content-center">
                         <h1 class="vertical-text section-title"><?= $about_txt ?></h1>
                     </div>
-                    <div class=" about-bio col-sm-8 d-flex align-items-center">
+                    <div class=" about-bio col-lg-7 col-xl-8 d-flex align-items-center">
                             <div>
                                 <?= $about_bio ?> 
                             </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-lg-4 col-xl-3">
                             <div class="about-img">
                                 <div class="content">
                                     <img src="<?= $about_img['url']; ?>" alt="marconte">
@@ -222,9 +222,11 @@ get_header();?>
                                 <div class="row">
                                     <div class="col-sm-4  contact_social d-flex justify-content-center">
                                         <ul class="row">
-                                            <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                            <li class=" col-md-12 col d-flex align-items-center p-3">
+                                            <a href=" mailto:<?=$email?>">
                                                 <span class="social-icon mr-2" > <i class="far fa-envelope"></i></span>
-                                                            <a href=" mailto:<?=$email?>"><?=$email?></a>
+                                                      <span class="social-text"><?=$email?></span>     
+                                            </a>
                                             </li>
                                             <?php
                                                 // check if the repeater field has rows of data
@@ -232,21 +234,21 @@ get_header();?>
 
                                                 // loop through the rows of data
                                                 while (have_rows('social', 'option')): the_row();?>
-                                                    <li class=" col-md-12 col-4 d-flex align-items-center p-3">
-                                                    <a href=" <?=the_sub_field('link');?>" target="_blank">
+                                                    <li class=" col-md-12 col d-flex align-items-center p-3">
+                                                    <a href=" <?=the_sub_field('link');?>" target="_blank" class="d-flex align-items-center">
                                                         <span class="social-icon mr-2" > <?=the_sub_field('icon');?></span>
-                                                        <?=the_sub_field('text');?></a>
+                                                       <span class="social-text"><?=the_sub_field('text');?></span> </a>
                                                     </li>
                                                 <?php endwhile;
 
                                                 else:
                                                 // no rows found
                                                 endif;?>
-                                                <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                                <li class=" social-location col-md-12 col d-flex align-items-center p-3">
                                                     <span class="social-icon mr-2" >
                                                         <i class="fas fa-map-marker"></i>
                                                     </span>
-                                                    <?=$loc?>
+                                                    <span class="location-text"><?=$loc?></span>
                                                 </li>
                                             </ul>
                                     </div>
