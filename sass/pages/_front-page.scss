@@ -411,7 +411,39 @@
     } */
 }
 
+#section-about {
+    .fp-tableCell {
+        display: block;
+    }
+    .about-bio {
+        height: 100vh;
+        @include breakpoint(mobileonly) {
+            padding: 0 45px;
+            align-items: inherit !important;
+            height: inherit;
+        }
+    }
+    .about-img{
+        @include ratio(1, 1);
+        @include breakpoint(mobileonly) {
+            display: none;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 
+    .about-skills {
+        padding: 30px 15px;
+        height: 100%;
+        background-color: #E77F67;
+        h2{
+            @include heading-3; 
+        }
+    }
+}
 .section-title {
     @include breakpoint(mobileonly) {
         & {

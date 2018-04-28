@@ -15,7 +15,7 @@
 $home_background = get_field('home_background', 'option');
 
 $about_bio = get_field('about-bio', 'option');
-$about_txt = get_field('bio-text', 'option');
+$about_txt = get_field('bio_text', 'option');
 $about_img = get_field('about-image', 'option');
 
 $email = get_field('email', 'option');
@@ -29,6 +29,10 @@ $contact_background = get_field('contact_background', 'option');
 
 $site_title = get_bloginfo('name');
 $site_description = get_bloginfo('description');
+
+
+$knowledges = get_field('knowledge', 'option');
+$tools = get_field('tools', 'option');
 
 get_header();?>
 <div id="primary" class="content-area">
@@ -48,7 +52,7 @@ get_header();?>
             <section id="section-services"class="section">
                 <div class="top" style="background-image: url('<?= $service_bgc['url']; ?>')">
                     <div class="title d-flex align-items-center justify-content-center">
-                        <h2 class="text-center">Préstations</h2>
+                        <h2 class="text-center">Vous avez un projet ?</h2>
                     </div>
                     <ul class="nav nav-tabs service-tabs row" id="myTab" role="tablist">
                         <?php 
@@ -154,7 +158,7 @@ get_header();?>
                     </div>
                         <?php endif;?>
                 </div>
-<!--                 <div class="list-projects">
+                <!-- <div class="list-projects">
                     <ul class="row  nav nav-tabs" role="tablist">
                     <?php 
                     $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -167,69 +171,109 @@ get_header();?>
                     </ul>
                 </div> -->
             </section>
-            <section id="section-about"class="section">About</section>
-            <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
-<div class="row">
-    <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                <h1 class="vertical-text section-title" style="color:#fff">Contact</h1>
-        </div>
-<div class="col-sm-11">
-<div class="row">
-                        <div class="col-sm-4 empty-space"></div>
-                        <div class="col-sm-8 ">
-                            <div class="row">
-                                <div class="col-sm-4  contact_social d-flex justify-content-center">
-                                    <ul class="row">
-                                        <li class=" col-md-12 col-4 d-flex align-items-center p-3">
-                                            <span class="social-icon mr-2" > <i class="far fa-envelope"></i></span>
-                                                        <a href=" mailto:<?=$email?>"><?=$email?></a>
-                                        </li>
-                                    <?php
-                                        // check if the repeater field has rows of data
-                                        if (have_rows('social', 'option')):
-
-                                        // loop through the rows of data
-                                        while (have_rows('social', 'option')): the_row();?>
-                                            <li class=" col-md-12 col-4 d-flex align-items-center p-3">
-                                                <span class="social-icon mr-2" > <?=the_sub_field('icon');?></span>
-                                                <a href=" <?=the_sub_field('link');?>" target="_blank"><?=the_sub_field('text');?></a>
-                                            </li>
-                                        <?php endwhile;
-
-                                        else:
-                                        // no rows found
-                                        endif;?>
-    <li class=" col-md-12 col-4 d-flex align-items-center p-3">
-                                            <span class="social-icon mr-2" > <i class="fas fa-map-marker"></i></span>
-                                                        <?=$loc?>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-8 contact_form d-flex justify-content-center">
-                                    <h3 class="text-center contact_title"><?=$contact_title?></h3>
-                                <?= do_shortcode($contact_form); ?>
-                                </div>
+            <section id="section-about"class="section">
+            <div class="row">
+                <div class="col-sm-1 d-flex align-items-center justify-content-center">
+                    <h1 class="vertical-text section-title"><?= $about_txt ?></h1>
+                </div>
+                <div class=" about-bio col-sm-8 d-flex align-items-center">
+                        <div>
+                            <?= $about_bio ?> 
+                        </div>
+                </div>
+                <div class="col-sm-3">
+                        <div class="about-img">
+                            <div class="content">
+                                <img src="<?= $about_img['url']; ?>" alt="marconte">
                             </div>
+                        </div>
+                        <div class="about-skills">
+                            <div class="mb-2">
+                                <h2>Connaissances du secteur</h2>
+                               <?php if( $knowledges ): ?>
+                                    <?php foreach( $knowledges as $k ):
+                                        $tag = get_tag($k);?>
+                                        <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
+                                    <?php endforeach; ?>
+                                <?php endif ?>
+                            </div>
+                            <div>
+                                <h2>Outils et tecnhologies</h2>
+                               <?php if( $tools ): ?>
+                                    <?php foreach( $tools as $t ):
+                                    $tag = get_tag($t);?>
+                                        <span class="badge-outline-light badge badge-pill "><?= $tag->name . ' '; ?></span>
+                                    <?php endforeach; ?>
+                                <?php endif ?>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </section>
+            <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
+                <div class="row">
+                    <div class="col-sm-1 d-flex align-items-center justify-content-center">
+                                <h1 class="vertical-text section-title" style="color:#fff">Contact</h1>
+                        </div>
+                    <div class="col-sm-11">
+                        <div class="row">
+                            <div class="col-sm-4 empty-space"></div>
+                            <div class="col-sm-8 ">
+                                <div class="row">
+                                    <div class="col-sm-4  contact_social d-flex justify-content-center">
+                                        <ul class="row">
+                                            <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                                <span class="social-icon mr-2" > <i class="far fa-envelope"></i></span>
+                                                            <a href=" mailto:<?=$email?>"><?=$email?></a>
+                                            </li>
+                                            <?php
+                                                // check if the repeater field has rows of data
+                                                if (have_rows('social', 'option')):
 
+                                                // loop through the rows of data
+                                                while (have_rows('social', 'option')): the_row();?>
+                                                    <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                                        <span class="social-icon mr-2" > <?=the_sub_field('icon');?></span>
+                                                        <a href=" <?=the_sub_field('link');?>" target="_blank"><?=the_sub_field('text');?></a>
+                                                    </li>
+                                                <?php endwhile;
+
+                                                else:
+                                                // no rows found
+                                                endif;?>
+                                                <li class=" col-md-12 col-4 d-flex align-items-center p-3">
+                                                    <span class="social-icon mr-2" >
+                                                        <i class="fas fa-map-marker"></i>
+                                                    </span>
+                                                    <?=$loc?>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    <div class="col-sm-8 contact_form d-flex justify-content-center">
+                                        <h3 class="text-center contact_title"><?=$contact_title?></h3>
+                                    <?= do_shortcode($contact_form); ?>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-</div>
-</div>
-                
-<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info col-sm-4">
-			<div class="row align-items-center">
-				<div class="col-2 footer-logo">
-					<img src="<?= get_template_directory_uri(); ?>/img/marconte_logo5.svg" alt="marconte">
-				</div>
-				<div class="col-10 footer-text">
-					<span>Thème Wordpress crée par <a href="#">Mathilde Arconte</a></span>
-					<span class="sep"> | </span>
-					<a href="#">Mentions Légales</a>
-				</div>
-			</div>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+                </div>
+                                
+                <footer id="colophon" class="site-footer" role="contentinfo">
+                    <div class="site-info col-sm-4">
+                        <div class="row align-items-center">
+                            <div class="col-2 footer-logo">
+                                <img src="<?= get_template_directory_uri(); ?>/img/marconte_logo5.svg" alt="marconte">
+                            </div>
+                            <div class="col-10 footer-text">
+                                <span>Thème Wordpress crée par <a href="#">Mathilde Arconte</a></span>
+                                <span class="sep"> | </span>
+                                <a href="#">Mentions Légales</a>
+                            </div>
+                        </div>
+                    </div><!-- .site-info -->
+                </footer><!-- #colophon -->
             </section>
         </div>
     </main>

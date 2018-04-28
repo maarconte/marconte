@@ -1066,13 +1066,10 @@ a:visited{color:purple}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-h1,h2,h3,h4,h5,h6{clear:both;font-family:Quicksand;text-transform:uppercase}
-h1{font-size:2.5rem}
-h2{font-size:2rem}
-h3{font-size:1.5rem}
-h4{font-size:1.5rem;font-family:FuturaSTD}
-h5{font-size:1.3 rem;font-family:FuturaSTD;margin-bottom:20px}
-h6{font-size:1rem;font-family:FuturaSTD;text-transform:capitalize;font-weight:bolder}
+h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:3.375em}
+h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:2.966em}
+h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5em}
+h4{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.318em}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
 body{background:#fff}
@@ -1092,8 +1089,11 @@ abbr,acronym{border-bottom:1px dotted #666;cursor:help}
 mark,ins{background:#fff9c0;text-decoration:none}
 big{font-size:125%}
 .vertical-text{-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}
+.badge{margin-bottom:10px}
 .badge-cat{background-color:#3bb2b8 !important;color:#fff !important;font-weight:400}
 .badge-tag{background-color:rgba(59,178,184,0.7) !important;color:#fff !important;font-weight:400}
+.badge-outline-light{color:#fff;background-color:transparent;border:2px solid #fff;-webkit-transition-duration:1s;transition-duration:1s}
+.badge-outline-light:hover{background-color:rgba(255,255,255,0.5)}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
@@ -1140,6 +1140,14 @@ big{font-size:125%}
 #section-portfolio .slide{padding:0 30px}
 #section-portfolio .fp-controlArrow{display:none}
 #section-portfolio .fp-slidesNav{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}
+#section-about .fp-tableCell{display:block}
+#section-about .about-bio{height:100vh}
+#section-about .about-img{position:relative}
+#section-about .about-img:before{display:block;content:"";width:100%;padding-top:100%}
+#section-about .about-img>.content{position:absolute;top:0;left:0;right:0;bottom:0}
+#section-about .about-img img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
+#section-about .about-skills{padding:30px 15px;height:100%;background-color:#e77f67}
+#section-about .about-skills h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5em}
 .site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
 .site-footer a{color:#fff}
 .site-footer .row{margin:0}
@@ -2051,6 +2059,8 @@ embed,iframe,object{max-width:100%}
 #section-portfolio .slide{padding:0 10px}
 #section-portfolio .fp-slidesNav.bottom{bottom:5px}
 #section-portfolio #fp-nav.right{right:0}
+#section-about .about-bio{padding:0 45px;-webkit-box-align:inherit !important;-webkit-align-items:inherit !important;-ms-flex-align:inherit !important;align-items:inherit !important;height:inherit}
+#section-about .about-img{display:none}
 .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
