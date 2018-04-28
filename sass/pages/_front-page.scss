@@ -2,6 +2,14 @@
     position: relative;
 }
 
+#primary {
+    opacity: 0;
+    transition-duration: 2s;
+    &.loaded {
+        opacity: 1;
+    }
+}
+
 #section-contact {
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -496,4 +504,15 @@
             cursor: text;
     }
 }
+}
+
+// animated
+
+.right {
+    opacity: 0;
+    transition-duration: 2s;
+}
+.right.animated {
+    opacity: 1;
+    right: 0;
 }

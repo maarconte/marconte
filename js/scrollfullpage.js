@@ -7,7 +7,7 @@ $(document).ready(function() {
 		slidesNavPosition: 'bottom',
         //Scrolling
 		css3: true,
-		scrollingSpeed: 1000,
+		scrollingSpeed: 2000,
 		autoScrolling: true,
 		fitToSection: true,
 		fitToSectionDelay: 5000,
@@ -32,5 +32,45 @@ $(document).ready(function() {
 		normalScrollElementTouchThreshold: 5,
 		bigSectionsDestination: null,
 		lazyLoading: true,
+
+		// Animation on loaded DOM
+		afterRender: function(){
+			var pluginContainer = $(this);
+			$("#primary").addClass("loaded");
+		},
+
+		// Animations on loaded sections
+		afterLoad: function(anchorLink, index){
+			var loadedSection = $(this);
+
+			const c_el = $("#section-contact .right");
+			const cel_width = c_el.offsetWidth;
+			c_el.css('right', width + 'px');	
+
+			const b_el = $("#section-contact .right");
+			const bel_width = b_el.offsetWidth;
+			b_el.css('right', width + 'px');	
+
+			if(anchorLink == 'Home'){
+				// Some animation
+			}
+
+			if(anchorLink == 'Services'){
+				// Somme animation
+			}
+
+			if(anchorLink == 'Portfolio'){
+				// Somme animation
+			}
+
+			if(anchorLink == 'Bio'){
+				$("#section-about .right").addClass("animated slideInRight");
+			}
+
+			if(anchorLink == 'Contact'){
+				c_el.addClass("animated slideInRight");
+			}
+		}
+		
     });
 });

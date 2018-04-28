@@ -181,7 +181,7 @@ get_header();?>
                                 <?= $about_bio ?> 
                             </div>
                     </div>
-                    <div class="col-lg-4 col-xl-3">
+                    <div class=" right col-lg-4 col-xl-3">
                             <div class="about-img">
                                 <div class="content">
                                     <img src="<?= $about_img['url']; ?>" alt="marconte">
@@ -215,7 +215,7 @@ get_header();?>
                     <div class="col-sm-1 d-flex align-items-center justify-content-center">
                                 <h1 class="vertical-text section-title" style="color:#fff">Contact</h1>
                         </div>
-                    <div class="col-sm-11">
+                    <div class="right col-sm-11">
                         <div class="row">
                             <div class="col-sm-4 empty-space"></div>
                             <div class="col-sm-8 ">

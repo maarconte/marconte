@@ -1101,6 +1101,8 @@ big{font-size:125%}
 .clear:before::after,.clear:after::after,.entry-content:before::after,.entry-content:after::after,.comment-content:before::after,.comment-content:after::after,.site-header:before::after,.site-header:after::after,.site-content:before::after,.site-content:after::after,.site-footer:before::after,.site-footer:after::after{display:block;content:"";clear:both}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
 #page{position:relative}
+#primary{opacity:0;-webkit-transition-duration:2s;transition-duration:2s}
+#primary.loaded{opacity:1}
 #section-contact{background-repeat:no-repeat;background-position:0 0;background-size:60%}
 #section-contact .fp-tableCell{display:block !important;height:inherit !important}
 #section-contact .row{height:100%}
@@ -1151,6 +1153,8 @@ big{font-size:125%}
 #section-about .about-skills{padding:30px 15px;height:100%;background-color:#e77f67}
 #section-about .about-skills h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5rem}
 .section-title:hover{cursor:vertical-text}
+.right{opacity:0;-webkit-transition-duration:2s;transition-duration:2s}
+.right.animated{opacity:1;right:0}
 .site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
 .site-footer a{color:#fff}
 .site-footer .row{margin:0}
