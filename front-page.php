@@ -40,6 +40,8 @@ get_header();?>
                         <img data-src="<?= get_template_directory_uri(); ?>/img/marconte_logo.svg" alt="marconte" class="mb-3" style="width:200px;">
                         <h1><?=$site_title?></h1>
                         <h2><?=$site_description?></h2>
+                        <img data-src="<?= get_template_directory_uri(); ?>/img/scroll_mouse.gif" alt="scroll_mouse" style="height: 100px;">
+                        <p class="p-mouse">Scroll</p>
                     </div>
                  </div>
             </section>

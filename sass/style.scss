@@ -21,31 +21,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Frameworks
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
-
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 @import "utilities/variables";
@@ -58,7 +33,7 @@ and comment the line "@import "bootsrap/bootstrap"".
 --------------------------------------------------------------*/
 @import "vendor/bootstrap/bootstrap";
 @import "vendor/jquery.fullPage";
-
+@import "vendor/_scroll_mouse.scss";
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
