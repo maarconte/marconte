@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		sectionsColor: ['#fff', '#fff', '#fff','#F7F8F3', '#E5B542'],
-		anchors:['firstPage', 'secondPage', 'thirdPage'],
+		anchors:['section-home', 'section-services', 'section-portfolio','section-about','section-contact'],
 		navigation: true,
 		slidesNavigation: true,
 		slidesNavPosition: 'bottom',
