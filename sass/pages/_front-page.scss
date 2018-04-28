@@ -445,12 +445,17 @@
     }
 }
 .section-title {
+    &:hover {
+        cursor: vertical-text;
+    }
     @include breakpoint(mobileonly) {
-        & {
             -webkit-transform: inherit;
             transform: inherit;
             margin: 5px; // font-size: 18px;
        
-        }
+        
+        &:hover {
+            cursor: text;
     }
+}
 }

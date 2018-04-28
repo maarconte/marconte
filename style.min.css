@@ -1066,10 +1066,10 @@ a:visited{color:purple}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:3.375em}
-h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:2.966em}
-h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5em}
-h4{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.318em}
+h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:3.375rem}
+h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:2.966rem}
+h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5rem}
+h4{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.318rem}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
 body{background:#fff}
@@ -1147,7 +1147,8 @@ big{font-size:125%}
 #section-about .about-img>.content{position:absolute;top:0;left:0;right:0;bottom:0}
 #section-about .about-img img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
 #section-about .about-skills{padding:30px 15px;height:100%;background-color:#e77f67}
-#section-about .about-skills h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5em}
+#section-about .about-skills h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5rem}
+.section-title:hover{cursor:vertical-text}
 .site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
 .site-footer a{color:#fff}
 .site-footer .row{margin:0}
@@ -2038,7 +2039,10 @@ embed,iframe,object{max-width:100%}
 }@media(max-width:575px){.navbar-toggleable .navbar-nav .dropdown-menu{position:static;float:none}
 .navbar-toggleable>.container{padding-right:0;padding-left:0}
 .hidden-xs-down{display:none !important}
-}@media(max-width:37.5em){#section-contact{background-size:cover}
+}@media(max-width:37.5em){h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:2.966rem}
+h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.5rem}
+h3{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:1.318rem}
+#section-contact{background-size:cover}
 #section-contact .contact_form{margin-bottom:15px;padding:15px 30px}
 #section-contact .contact_title{padding-bottom:30px !important}
 #section-contact .contact_title:after{bottom:15px !important}
@@ -2062,6 +2066,7 @@ embed,iframe,object{max-width:100%}
 #section-about .about-bio{padding:0 45px;-webkit-box-align:inherit !important;-webkit-align-items:inherit !important;-ms-flex-align:inherit !important;align-items:inherit !important;height:inherit}
 #section-about .about-img{display:none}
 .section-title{-webkit-transform:inherit;-ms-transform:inherit;transform:inherit;margin:5px}
+.section-title:hover{cursor:text}
 }@media print{*,*::before,*::after,p::first-letter ,div::first-letter ,blockquote::first-letter ,li::first-letter ,p::first-line ,div::first-line ,blockquote::first-line ,li::first-line {text-shadow:none !important;box-shadow:none !important}
 a,a:visited{text-decoration:underline}
 abbr[title]::after{content:" (" attr(title) ")"}
