@@ -7,10 +7,10 @@ $(document).ready(function() {
 		slidesNavPosition: 'bottom',
         //Scrolling
 		css3: true,
-		scrollingSpeed: 2000,
+		scrollingSpeed: 1000,
 		autoScrolling: true,
 		fitToSection: true,
-		fitToSectionDelay: 5000,
+		fitToSectionDelay: 2000,
 		scrollBar: false,
 		easing: 'easeInOutBack',
 		easingcss3: 'ease',
@@ -37,6 +37,7 @@ $(document).ready(function() {
 		afterRender: function(){
 			var pluginContainer = $(this);
 			$("#primary").addClass("loaded");
+			$(".logo-loading").delay(4000).fadeOut();
 		},
 
 		// Animations on loaded sections
@@ -45,11 +46,11 @@ $(document).ready(function() {
 
 			const c_el = $("#section-contact .right");
 			const cel_width = c_el.offsetWidth;
-			c_el.css('right', width + 'px');	
+			c_el.css('right', cel_width + 'px');	
 
 			const b_el = $("#section-contact .right");
 			const bel_width = b_el.offsetWidth;
-			b_el.css('right', width + 'px');	
+			b_el.css('right', bel_width + 'px');	
 
 			if(anchorLink == 'Home'){
 				// Some animation
