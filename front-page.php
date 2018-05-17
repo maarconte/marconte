@@ -75,14 +75,31 @@ get_header();?>
                             endif;?>
                     </ul>
                 </div>
-                <div class="service-text tab-content d-flex align-items-center" id="myTabContent">
+                <div class="service-content tab-content d-flex align-items-center" id="myTabContent">
                     <?php 
                         if (have_rows('social', 'option')):
                         // loop through the rows of data
                          $y = 0;
                             while (have_rows('service', 'option')): the_row();?>
                                 <div class="tab-pane fade container <?php if ($y == 0): ?> show active <?php endif;?>" id="tab-<?=$y?>" role="tabpanel" aria-labelledby="home-tab">
-                                    <?=the_sub_field('text');?></div>
+                                    <div class="row">
+
+                                    <?php if( have_rows('content', 'option') ):
+                                            while( have_rows('content', 'option') ) : the_row(); ?>
+                                                <div class="col-sm-6 content"> 
+                                                    <div class="content_img">
+                                                        <img src="<?=the_sub_field('image');?>" alt="service_img">
+                                                    </div>                                
+                                            <div class="content_text">
+                                                <?=the_sub_field('text');?>
+                                            </div>                     
+                                        </div>
+                                           <?php endwhile;
+                                        endif;
+                                    ?>
+                                    
+                                    </div>
+                                </div>
                             <?php $y++;
                             endwhile;
                         else:
@@ -216,7 +233,7 @@ get_header();?>
             <section id="section-contact"class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
                 <div class="row">
                     <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                                <h1 class="vertical-text section-title" style="color:#fff">Contact</h1>
+                                <h1 class="vertical-text section-title" style="color:#fff !important">Contact</h1>
                         </div>
                     <div class="right col-sm-11">
                         <div class="row">
