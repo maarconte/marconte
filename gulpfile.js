@@ -196,9 +196,6 @@ gulp.task( 'browser-sync', function() {
     .pipe( sass( {
       errLogToConsole: true,
       outputStyle: 'compact',
-      // outputStyle: 'compressed',
-      // outputStyle: 'nested',
-      // outputStyle: 'expanded',
       precision: 10
     } ) )
     .on('error', console.error.bind(console))

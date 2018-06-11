@@ -1110,6 +1110,7 @@ big{font-size:125%}
 #section-contact .contact_form{background-color:#cf9e76;padding:50px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}
 #section-contact .contact_title{position:relative;color:#fff !important;padding-bottom:50px}
 #section-contact .contact_title:after{display:block;position:absolute;bottom:25px;left:0;left:33%;content:'';height:2px;width:33%;background-color:#fff}
+#section-contact div.wpcf7-mail-sent-ok{border:2px solid #fff !important;color:#fff}
 #section-home{background-repeat:no-repeat;background-size:cover;background-position:center center}
 #section-home .jumbotron{background-color:transparent}
 #section-home h1{font-size:5vw !important}

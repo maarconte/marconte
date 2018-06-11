@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		sectionsColor: ['#fff', '#F7F8F3', '#F7F8F3','#F7F8F3', '#F7F8F3'],
+		sectionsColor: ['#fff', '#F7F8F3', '#3BB2B8','#F7F8F3', '#F7F8F3'],
 		anchors:['Home', 'Votre projet', 'Portfolio','Bio','Contact'],
 		navigation: true,
 		slidesNavigation: true,
