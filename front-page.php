@@ -96,14 +96,15 @@ get_header();?>
                                 $numberRows = count(get_sub_field('content', 'option'));
                                 if( have_rows('content', 'option') ):
                                     while( have_rows('content', 'option') ) : the_row(); ?>
-                                        <div class=" <?php if ($numberRows == 1): echo 'col-sm-12'; else : echo 'col-sm-6'; endif;?> content">
-                                            <div class="content_img">
-                                                <img src="<?=the_sub_field('image');?>" alt="service_img">
-                                            </div>
-                                            <div class="content_text">
-                                                <?=the_sub_field('text');?>
-                                            </div>
-                                        </div>
+                                <div class=" <?php if ($numberRows == 1): echo 'col-sm-12'; else : echo 'col-sm-6'; endif;?> content">
+                                    <!-- <div class="content_img">
+                                         <img src="<?=the_sub_field('image');?>" alt="service_img">
+                                        <?= the_sub_field('image');?>
+                                    </div> -->
+                                    <div class="content_text">
+                                        <?=the_sub_field('text');?>
+                                    </div>
+                                </div>
                                 <?php endwhile;
                                         endif;
                                     ?>
