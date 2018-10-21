@@ -62,7 +62,7 @@ get_header();?>
                             <h2 class="text-center">Vous avez un projet ?</h2>
                         </div>
                         <ul class="nav nav-tabs service-tabs row" id="myTab" role="tablist">
-                            <?php 
+                            <?php
                             if (have_rows('social', 'option')):
                             // loop through the rows of data
                                 $i = 0;
@@ -84,7 +84,7 @@ get_header();?>
                         </ul>
                     </div>
                     <div class="service-content tab-content d-flex align-items-center" id="myTabContent">
-                        <?php 
+                        <?php
                         if (have_rows('social', 'option')):
                         // loop through the rows of data
                          $y = 0;
@@ -92,7 +92,7 @@ get_header();?>
                         <div class="tab-pane fade container <?php if ($y == 0): ?> show active <?php endif;?>" id="tab-<?=$y?>" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row">
 
-                                <?php 
+                                <?php
                                 $numberRows = count(get_sub_field('content', 'option'));
                                 if( have_rows('content', 'option') ):
                                     while( have_rows('content', 'option') ) : the_row(); ?>
@@ -124,7 +124,7 @@ get_header();?>
                             <h1 class="vertical-text section-title">Portfolio</h1>
                         </div>
 
-                        <?php 
+                        <?php
                         $posts = get_posts(array(
                             'posts_per_page' => -1,
                             'post_type' => 'portfolios',
@@ -175,7 +175,7 @@ get_header();?>
                                         <div>
                                             <?php the_field("mission");?>
                                         </div>
-                                        <?php 
+                                        <?php
                                             $cats = get_the_category($id);
                                             $posttags = get_the_tags();
                                             if ($cats) {
@@ -201,7 +201,7 @@ get_header();?>
                     </div>
                     <!-- <div class="list-projects">
                     <ul class="row  nav nav-tabs" role="tablist">
-                    <?php 
+                    <?php
                     $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     foreach ($posts as $post):
                     setup_postdata($post); ?>
@@ -269,16 +269,6 @@ get_header();?>
                                     <div class="row">
                                         <div class="col-sm-4  contact_social d-flex justify-content-center">
                                             <ul class="row">
-                                                <li class=" col-md-12 col d-flex align-items-center p-3">
-                                                    <a href=" mailto:<?=$email?>">
-                                                        <span class="social-icon mr-2">
-                                                            <i class="far fa-envelope"></i>
-                                                        </span>
-                                                        <span class="social-text">
-                                                            <?=$email?>
-                                                        </span>
-                                                    </a>
-                                                </li>
                                                 <?php
                                                 // check if the repeater field has rows of data
                                                 if (have_rows('social', 'option')):

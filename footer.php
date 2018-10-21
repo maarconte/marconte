@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-<!-- 
+<!--
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info col-sm-4">
 			<div class="row align-items-center">
@@ -30,8 +30,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-
 </body>
 </html>
