@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-		sectionsColor: ['#fff', '#F7F8F3', '#3BB2B8','#F7F8F3', '#F7F8F3'],
-		anchors:['Home', 'Votre projet', 'Portfolio','Bio','Contact'],
+		sectionsColor: ['#fff', '#fff', '#fff','#F7F8F3', '#F7F8F3'],
+		anchors:['Home', 'Bio','Votre projet', 'Portfolio','Contact'],
 		navigation: true,
 		slidesNavigation: true,
 		slidesNavPosition: 'bottom',
@@ -46,11 +46,11 @@ $(document).ready(function() {
 
 			const c_el = $("#section-contact .right");
 			const cel_width = c_el.offsetWidth;
-			c_el.css('right', cel_width + 'px');	
+			c_el.css('right', cel_width + 'px');
 
-			const b_el = $("#section-contact .right");
+			const b_el = $("#section-about .right");
 			const bel_width = b_el.offsetWidth;
-			b_el.css('right', bel_width + 'px');	
+			b_el.css('right', bel_width + 'px');
 
 			if(anchorLink == 'Home'){
 				// Some animation
@@ -65,13 +65,14 @@ $(document).ready(function() {
 			}
 
 			if(anchorLink == 'Bio'){
-				$("#section-about .right").addClass("animated slideInRight");
+			//	$("#section-about .right").addClass("animated slideInRight");
+			b_el.addClass("animated slideInRight");
 			}
 
 			if(anchorLink == 'Contact'){
 				c_el.addClass("animated slideInRight");
 			}
 		}
-		
+
     });
 });

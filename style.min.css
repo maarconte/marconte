@@ -68,7 +68,7 @@ template{display:none}
 html{box-sizing:border-box}
 *,*::before,*::after{box-sizing:inherit}
 @-ms-viewport{width:device-width}
-html{-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}
+html{-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 body{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:1rem;font-weight:normal;line-height:1.5;color:#292b2c;background-color:#fff}
 [tabindex="-1"]:focus{outline:none !important}
 h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}
@@ -953,7 +953,7 @@ a.text-gray-dark:focus,a.text-gray-dark:hover{color:#101112 !important}
 .visible-print-block{display:none !important}
 .visible-print-inline{display:none !important}
 .visible-print-inline-block{display:none !important}
-/*! fullPage 2.9.7 https://github.com/alvarotrigo/fullPage.js MIT licensed Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo */html.fp-enabled,.fp-enabled body{margin:0;padding:0;overflow:hidden;-webkit-tap-highlight-color:transparent}
+/*! fullPage 2.9.7 https://github.com/alvarotrigo/fullPage.js MIT licensed Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo */html.fp-enabled,.fp-enabled body{margin:0;padding:0;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .fp-section{position:relative;box-sizing:border-box}
 .fp-slide{float:left}
 .fp-slide,.fp-slidesContainer{height:100%;display:block}
@@ -1118,8 +1118,8 @@ big{font-size:125%}
 #section-home .mouse{display:block;margin:0 auto;width:36px;height:56px;border-radius:23px;border:2px solid #3bb2b8}
 #section-home .mouse span{display:block;margin:6px auto;width:3px;height:3px;border-radius:4px;background:#3bb2b8;border:1px solid transparent;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:scroll;animation-name:scroll}
 #section-services .fp-tableCell{display:block}
-#section-services .top{position:relative;height:25%;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center center}
-#section-services .top .title{height:60%}
+#section-services .top{position:relative;height:35%;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center center}
+#section-services .top .title{height:85%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;text-align:center;padding:30px}
 #section-services .top .title h2{color:#fff !important;margin:0}
 #section-services .top .service-tabs{position:absolute;bottom:0;background-color:rgba(0,111,120,0.54);width:100%;margin:0 !important}
 #section-services .top .service-tabs .nav-item{padding:1rem}
@@ -1127,7 +1127,7 @@ big{font-size:125%}
 #section-services .top .service-tabs .nav-link.active{position:relative;background-color:transparent !important;opacity:1}
 #section-services .top .service-tabs .nav-link:hover{border:0}
 #section-services .top .service-tabs .nav-link:hover:not(.active){opacity:1}
-#section-services .service-content{height:calc(100% - 25%)}
+#section-services .service-content{height:calc(100% - 35%)}
 #section-services .service-content .content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;height:100%}
 #section-services .service-content .content .content_text{padding:15px;width:100%}
 #section-services .service-content .content .content_img{position:relative;width:100%;overflow:hidden}
@@ -1146,6 +1146,7 @@ big{font-size:125%}
 #section-portfolio .slide{padding:0 30px}
 #section-portfolio .fp-controlArrow{display:none}
 #section-portfolio .fp-slidesNav{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}
+#section-about .btn-primary{background-color:#e77f67 !important;border-color:#e77f67 !important;color:#fff !important}
 #section-about .fp-tableCell{display:block}
 #section-about .about-bio{height:100vh}
 #section-about .about-img{position:relative}

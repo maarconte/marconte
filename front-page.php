@@ -56,10 +56,58 @@ get_header();?>
                         </div>
                     </div>
                 </section>
+                <section id="section-about" class="section">
+                    <div class="row">
+                        <div class="col-sm-1 d-flex align-items-center justify-content-center">
+                            <h1 class="vertical-text section-title">
+                                <?= $about_txt ?>
+                            </h1>
+                        </div>
+                        <div class=" about-bio col-lg-6 col-xl-7 d-flex align-items-center">
+                            <div>
+                                <?= $about_bio ?>
+                            </div>
+                        </div>
+                        <div class="right col-lg-5 col-xl-4">
+                            <div class="about-img">
+                                <div class="content">
+                                    <img src="<?= $about_img['url']; ?>" alt="marconte">
+                                </div>
+                            </div>
+                            <div class="about-skills">
+                                <div class="mb-2">
+                                    <h2>Connaissances du secteur</h2>
+                                    <?php if( $knowledges ): ?>
+                                    <?php foreach( $knowledges as $k ):
+                                            $tag = get_tag($k);?>
+                                    <span class="badge-outline-light badge badge-pill ">
+                                        <?= $tag->name . ' '; ?>
+                                    </span>
+                                    <?php endforeach; ?>
+                                    <?php endif ?>
+                                </div>
+                                <div>
+                                    <h2>Outils et tecnhologies</h2>
+                                    <?php if( $tools ): ?>
+                                    <?php foreach( $tools as $t ):
+                                        $tag = get_tag($t);?>
+                                    <span class="badge-outline-light badge badge-pill ">
+                                        <?= $tag->name . ' '; ?>
+                                    </span>
+                                    <?php endforeach; ?>
+                                    <?php endif ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="section-services" class="section">
                     <div class="top" style="background-image: url('<?= $service_bgc['url']; ?>')">
                         <div class="title d-flex align-items-center justify-content-center">
-                            <h2 class="text-center">Vous avez un projet ?</h2>
+                            <h2 class="text-center mb-2">Vous avez un projet ?</h2>
+                            <p class="text-white">Mes prestations sont adaptées à vos besoins. N'hésitez pas à demander un devis gratuit.</p>
+                            <a class="btn btn-secondary" href="#section-contact">Me contacter</a>
+
                         </div>
                         <ul class="nav nav-tabs service-tabs row" id="myTab" role="tablist">
                             <?php
@@ -212,51 +260,7 @@ get_header();?>
                     </ul>
                 </div> -->
                 </section>
-                <section id="section-about" class="section">
-                    <div class="row">
-                        <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                            <h1 class="vertical-text section-title">
-                                <?= $about_txt ?>
-                            </h1>
-                        </div>
-                        <div class=" about-bio col-lg-7 col-xl-8 d-flex align-items-center">
-                            <div>
-                                <?= $about_bio ?>
-                            </div>
-                        </div>
-                        <div class=" right col-lg-4 col-xl-3">
-                            <div class="about-img">
-                                <div class="content">
-                                    <img src="<?= $about_img['url']; ?>" alt="marconte">
-                                </div>
-                            </div>
-                            <div class="about-skills">
-                                <div class="mb-2">
-                                    <h2>Connaissances du secteur</h2>
-                                    <?php if( $knowledges ): ?>
-                                    <?php foreach( $knowledges as $k ):
-                                            $tag = get_tag($k);?>
-                                    <span class="badge-outline-light badge badge-pill ">
-                                        <?= $tag->name . ' '; ?>
-                                    </span>
-                                    <?php endforeach; ?>
-                                    <?php endif ?>
-                                </div>
-                                <div>
-                                    <h2>Outils et tecnhologies</h2>
-                                    <?php if( $tools ): ?>
-                                    <?php foreach( $tools as $t ):
-                                        $tag = get_tag($t);?>
-                                    <span class="badge-outline-light badge badge-pill ">
-                                        <?= $tag->name . ' '; ?>
-                                    </span>
-                                    <?php endforeach; ?>
-                                    <?php endif ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
                 <section id="section-contact" class="section" style="background-image: url('<?= $contact_background['url']; ?>')">
                     <div class="row">
                         <div class="col-sm-1 d-flex align-items-center justify-content-center">
