@@ -1,0 +1,24 @@
+
+<svg width="358px" height="323px" viewBox="0 0 358 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="47.2527766%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#43E695" offset="0%"></stop>
+            <stop stop-color="#3BB2B8" offset="100%"></stop>
+        </linearGradient>
+        <path d="M146.428033,51.1095764 L205.436189,154.765383 L146.428033,253.558324 L25.4516602,253.558324 L146.428033,51.1095764 Z M267.372231,51.1095764 L382.589355,253.558324 L261.612983,253.558324 L205.436189,154.765383 L267.372231,51.1095764 Z M83.0763099,367.611704 L319.237633,367.611704 L319.237633,373.050434 L83.0763099,373.050434 L83.0763099,367.611704 Z" id="path-2"></path>
+    </defs>
+    <g id="Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-329.000000, -163.000000)">
+            <g id="Section-Home">
+                <g id="Brands/marconte" transform="translate(304.000000, 112.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

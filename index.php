@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package medusa
+ * @package marconte
  */
 
 get_header(); ?>

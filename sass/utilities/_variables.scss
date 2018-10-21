@@ -1,0 +1,78 @@
+
+/*=============================================
+=            Colors                           =
+=============================================*/
+
+$color_form: #CF9E76;
+$black: #404040;
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #fff;
+$color__text-input-focus:$color_form;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: rgba($color: $black, $alpha: .7);
+$color__text-heading: rgba($color: $black, $alpha: 1);
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #fff;
+$color__border-abbr: #666;
+
+$gradient: linear-gradient(-136deg, #43E695 0%, #3BB2B8 48%);
+$primary: #3BB2B8;
+/*=====  End of Colors                 ======*/
+
+
+/*=============================================
+=            Sizes                            =
+=============================================*/
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+/*=====  End of Sizes                  ======*/
+
+
+/*=============================================
+=            Typography                       =
+=============================================*/
+
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Book.otf");
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url("./fonts/Quicksand_Light.otf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: FuturaSTD;
+    src: url("./fonts/FuturaStd-Book.otf");
+}
+
+$font__main: FuturaSTD;
+$font__heading: Quicksand;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+/*=====  End of Typography             ======*/
+
+
+
+
+

@@ -1,0 +1,26 @@
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    clear: both;
+    width: 100%;
+    z-index: 1234567890;
+    color: #fff;
+    font-size: .9rem;
+    a {
+        color: #fff;
+	}
+	.row {
+		margin: 0;
+	}
+	.footer-logo {
+		img {
+			width: 30px;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.footer-text {
+		padding: 0;
+	}
+}
