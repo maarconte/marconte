@@ -1046,10 +1046,12 @@ ol{list-style:decimal}
 li>ul,li>ol{margin-bottom:0;margin-left:1.5em}
 dt{font-weight:bold}
 dd{margin:0 1.5em 1.5em}
-button,input[type="button"],input[type="reset"],input[type="submit"],.wpcf7-submit{min-width:100px;border:1px solid;border-color:#fff;border-radius:3px;background:#fff;font-weight:bold;font-size:12px;font-size:.75rem;line-height:1;padding:.6em;text-transform:uppercase}
-button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.wpcf7-submit:hover{border-color:#ccc #bbb #aaa;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
-button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus,.wpcf7-submit:active,.wpcf7-submit:focus{border-color:#aaa #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
+button:not(.close),input[type="button"],input[type="reset"],input[type="submit"],.wpcf7-submit{min-width:100px;border:1px solid;border-color:#fff;border-radius:3px;background:#fff;font-weight:bold;font-size:12px;font-size:.75rem;line-height:1;padding:.6em;text-transform:uppercase}
+button:not(.close):hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.wpcf7-submit:hover{border-color:#ccc #bbb #aaa;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
+button:not(.close):active,button:not(.close):focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus,.wpcf7-submit:active,.wpcf7-submit:focus{border-color:#aaa #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
 .wpcf7-submit{color:#cf9e76}
+.btn-primary{background-color:#3bb2b8;border-color:#3bb2b8;color:#fff !important}
+.btn-primary:hover{background-color:#21759b;border-color:#21759b}
 .badge-pill{padding:10px}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea.form-control{color:#fff;border:2px solid #fff;border-radius:3px;background-color:transparent;padding:5px;width:100%;margin-bottom:15px}
 input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea.form-control:focus{color:#cf9e76;background-color:#fff;border-color:#fff}
@@ -1057,10 +1059,8 @@ label{color:#fff;width:100%;font-weight:lighter}
 select{border:1px solid #fff}
 .wpcf7-form .row{margin-right:inherit !important}
 a{color:royalblue}
-a:visited{color:purple}
 a:hover,a:focus,a:active{color:midnightblue}
-a:focus{outline:thin dotted}
-a:hover,a:active{outline:0}
+a:hover,a:active,a:focus{outline:0}
 h1,h2,h3,h4{color:#404040 !important}
 h1{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:3.375rem}
 h2{margin-bottom:.35em;line-height:1.2;color:inherit;clear:both;font-family:Quicksand;text-transform:uppercase;font-size:2.966rem}
@@ -1112,6 +1112,11 @@ big{font-size:125%}
 #section-contact .contact_title:after{display:block;position:absolute;bottom:25px;left:0;left:33%;content:'';height:2px;width:33%;background-color:#fff}
 #section-contact div.wpcf7-mail-sent-ok{border:2px solid #fff !important;color:#fff}
 #section-home{background-repeat:no-repeat;background-size:cover;background-position:center center}
+#section-home .menu{position:absolute;top:30px;right:30px}
+#section-home .social-list{position:absolute;bottom:30px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex}
+#section-home .social-list li{list-style:none;margin-right:10px}
+#section-home .social-list li a{color:#3bb2b8;font-size:2rem}
+#section-home .social-list li a:hover{color:#21759b}
 #section-home .jumbotron{background-color:transparent}
 #section-home h1{font-size:5vw !important}
 #section-home h2{font-size:3vw !important}
@@ -1159,6 +1164,7 @@ big{font-size:125%}
 .section-title:hover{cursor:vertical-text}
 .right{opacity:0;-webkit-transition-duration:2s;transition-duration:2s}
 .right.animated{right:0;opacity:1}
+.list-mentions-legales{padding:inherit;margin:1rem 0}
 .site-footer{position:absolute;bottom:0;left:0;clear:both;width:100%;z-index:1234567890;color:#fff;font-size:.9rem}
 .site-footer a{color:#fff}
 .site-footer .row{margin:0}
@@ -1437,6 +1443,7 @@ embed,iframe,object{max-width:100%}
 .text-sm-right{text-align:right !important}
 .text-sm-center{text-align:center !important}
 .hidden-sm-up{display:none !important}
+.modal-dialog{max-width:700px;margin:30px auto}
 }@media(min-width:768px){.container{padding-right:15px;padding-left:15px}
 .container{width:720px;max-width:100%}
 .container-fluid{padding-right:15px;padding-left:15px}

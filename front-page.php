@@ -39,7 +39,11 @@ get_header();?>
         <main id="main" class="site-main" role="main">
             <div id="fullpage" class="wrapper">
                 <section id="section-home" class="section" style="background-image: url('<?= $home_background['url']; ?>')">
-                    <div class="jumbotron">
+                <div class="menu">
+                    <a href="#section-portfolio" class="btn btn-primary">Portfolio</a>
+                    <a href="#section-contact" class="btn btn-primary">Contact</a>
+                </div>
+                <div class="jumbotron">
                         <div class="container text-center">
                             <img data-src="<?= get_template_directory_uri(); ?>/img/marconte_logo.svg" alt="marconte" class="mb-3" style="width:200px;">
                             <h1>
@@ -54,6 +58,25 @@ get_header();?>
                             <!-- <img data-src="<?= get_template_directory_uri(); ?>/img/scroll_mouse.gif" alt="scroll_mouse" style="height: 100px;">
                         <p class="p-mouse">Scroll</p> -->
                         </div>
+                        <ul class="social-list">
+                                                <?php
+                                                // check if the repeater field has rows of data
+                                                if (have_rows('social', 'option')):
+                                                // loop through the rows of data
+                                                while (have_rows('social', 'option')): the_row();?>
+                                                    <li>
+                                                        <a href=" <?=the_sub_field('link');?>" target="_blank">
+
+                                                                <?=the_sub_field('icon');?>
+
+                                                        </a>
+                                                    </li>
+                                                    <?php endwhile;
+
+                                                else:
+                                                // no rows found
+                                                endif;?>
+                                            </ul>
                     </div>
                 </section>
                 <section id="section-about" class="section">
@@ -325,10 +348,12 @@ get_header();?>
                                 </div>
                                 <div class="col-10 footer-text">
                                     <span>Thème Wordpress crée par
-                                        <a href="#">Mathilde Arconte</a>
+                                       Mathilde Arconte
                                     </span>
                                     <span class="sep"> | </span>
-                                    <a href="#">Mentions Légales</a>
+                                    <a class="mentions" href="" data-toggle="modal" data-target="#exampleModal">Mentions Légales</a>
+
+</div>
                                 </div>
                             </div>
                         </div>
@@ -339,5 +364,34 @@ get_header();?>
             </div>
         </main>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mentions légales</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h3>Présentation du site</h3>
+<p>En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site https://marconte.fr/ l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+<ul class="list-mentions-legales">
+ 	<li><strong>Créateur &amp; Propriétaire</strong> : Mathilde Arconte</li>
+ 	<li><strong>N° SIREN</strong> : 811 373 125</li>
+ 	<li><strong>Responsable publication</strong> : Mathilde Arconte – contact@marconte.fr</li>
+ 	<li>Le responsable publication est une personne physique ou une personne morale.</li>
+ 	<li><strong>Webmaster</strong> : Mathilde Arconte – contact@marconte.fr</li>
+</ul>
+<h3>Hébergement</h3>
+<p>OVH, 2 rue Kellermann 59100 Roubaix, France</p>
+<h3>Confidentialité</h3>
+<p>Mathilde Arconte n’enregistre pas d’informations personnelles permettant l’identification, à l’exception des formulaires que l’utilisateur est libre de remplir.</p>
+   <p> Ces informations ne seront pas utilisées sans votre accord, je les utiliserais seulement pour vous adresser des courriers, des brochures, des devis ou vous contacter.</p>
+
+<p>Les informations recueillies sur les sites bénéficient de la protection de la loi « <em>Informatique et Libertés</em> » n° 78-17 du 06 janvier 1978. Elles bénéficient d’un droit d’accès, de rectification, d’opposition à communication et de suppression sur simple demande à Mathilde Arconte.</p>
+      </div>
+    </div>
+  </div>
     <!-- #primary -->
     <?php get_footer();?>

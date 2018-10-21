@@ -197,6 +197,32 @@
     }
 
 
+    .menu {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .social-list {
+        position: absolute;
+        bottom: 30px;
+        display: inline-flex;
+
+        li {
+            list-style: none;
+            margin-right: 10px;
+
+            a {
+                color: $primary;
+                font-size: 2rem;
+
+                &:hover {
+                    color: $primary-darker;
+                }
+            }
+        }
+    }
+
     @-webkit-keyframes scroll {
         0% {
             opacity: 1;
@@ -387,7 +413,7 @@
 
         .content:nth-child(even) {
             // flex-direction: column-reverse;
-       
+
         }
     }
 }
@@ -632,4 +658,16 @@
 .right.animated {
     right: 0;
     opacity: 1;
+}
+
+.list-mentions-legales {
+  padding: inherit;
+  margin: 1rem 0;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+max-width: 700px;
+margin: 30px auto;
+}
 }
